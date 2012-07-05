@@ -5,7 +5,7 @@ A Rails Engine for resources common to multiple Sencha apps.
 
 To include this engine in your Rails app add the following to your Gemfile. Note you must replace the ref parameter with the latest Git commit ref for this engine.
 
-    gem 'semcha_base', :git => 'git@github.com:hypertiny/SenchaBase.git', :ref => 'xxxxxxxx'
+    gem 'semcha_base', :git => 'git://github.com/hypertiny/SenchaBase.git', :ref => 'xxxxxxxx'
 
 Any resources you want share among multiple apps should be added to this engine as you would add them to any Rails app.For example add stylesheets to `app/assets/sencha_base/stylesheets/..`. These stylesheets will then be accessible in any app that includes this engine at `/assets/sencha_base/..`.
 
