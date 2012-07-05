@@ -16,3 +16,8 @@ Development process for this engine
 2. Update the Git ref in the Gemfile of each app using this engine and run `bundle`.
 3. Commit the changes in the host app.
 4. If more changes are needed in the engine go back to step 1.
+
+Note to test changes to this engine locally before committing them you should change your Gemfile *temporarily* to reference the local version of this engine e.g.
+
+    gem 'sencha_base'
+
