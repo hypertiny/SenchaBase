@@ -1,8 +1,6 @@
 // These styles are included in the Sencha Base application.css manifest file
 // And then shared across all Sencha apps; ID, Devs and Market.
 
-// Note Scss mixins need to be included in each app for compiling reasons.
-
 // For image replacement
 .ir {
   display: block;
@@ -13,6 +11,7 @@
   direction: ltr;
   width: 0;
 }
+
 .visually-hidden {
   position: absolute;
   margin: -1px;
@@ -23,6 +22,7 @@
   border: 0;
   clip: rect(0 0 0 0);
 }
+
 .visually-hidden.focusable:active, 
 .visually-hidden.focusable:focus {
   position: static;
@@ -31,4 +31,77 @@
   width: auto ;
   overflow: visible;
   clip: auto;
+}
+
+@mixin border-radius($rad) {
+  -moz-border-radius: $rad;
+  -webkit-border-radius: $rad;
+  -o-border-radius: $rad;
+  -ms-border-radius: $rad;
+  -khtml-border-radius: $rad;
+  border-radius: $rad;
+}
+
+@mixin background-clip {
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+@mixin btm-right-rounded-border($rad) {
+  -webkit-border-bottom-right-radius: $rad;
+  -moz-border-bottom-right-radius: $rad;
+  border-bottom-right-radius: $rad;
+}
+
+@mixin btm-left-rounded-border($rad) {
+  -webkit-border-bottom-left-radius: $rad;    
+  -moz-border-bottom-left-radius: $rad;
+  border-bottom-left-radius: $rad;
+}
+
+@mixin top-left-rounded-border($rad) {
+  -webkit-border-top-left-radius: $rad;    
+  -moz-border-top-left-radius: $rad;
+  border-top-left-radius: $rad;
+}
+
+@mixin topside_rounded_border($hrad, $vrad) {
+  -webkit-border-top-left-radius: $hrad $vrad;
+  -webkit-border-top-right-radius: $hrad $vrad;    
+  -moz-border-top-left-radius: $hrad $vrad;
+  -moz-border-top-right-radius: $hrad $vrad;
+  border-top-left-radius: $hrad $vrad;
+  border-top-right-radius: $hrad $vrad;
+}
+
+@mixin box-shadow($horz, $vert, $blur, $color) {
+  -webkit-box-shadow: $horz $vert $blur $color;
+  -moz-box-shadow: $horz $vert $blur $color;
+  box-shadow: $horz $vert $blur $color;
+}
+
+@mixin transition($property, $duration, $ease) {
+  -webkit-transition: $property $duration $ease;
+  -moz-transition: $property $duration $ease;
+  -o-transition: $property $duration $ease;
+  transition: $property $duration $ease;
+}
+
+@mixin transition-simple($property, $duration) {
+  -webkit-transition: $property $duration;
+  -moz-transition: $property $duration;
+  -o-transition: $property $duration;
+  transition: $property $duration;
+}
+
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
