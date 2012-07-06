@@ -119,11 +119,6 @@ fieldset {
 	margin-bottom: 0.5em;
   border-bottom: 1px solid #DEDEDE;
 }
-form h3 {
-  margin: 1.5em 0 0.2em;
-  padding: 0 0 0.5em;
-  border-bottom: 1px solid #DEDEDE;
-}
 textarea, input, select, label, button, optgroup {
 	font-size: 1em;
 }
@@ -145,42 +140,18 @@ label {
   width: auto;
   float: none;
 }
-input[type="checkbox"] {
-  margin: 13px 0 0;
-}
-input[type="submit"] {
-  margin-top: 30px;
-}
+
+/*Reset buttons*/
 input[type="submit"], button {
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  background: transparent;
+  border: none;
+  color: #434343;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
 }
 input[type="submit"]:hover, button:hover {
   cursor: pointer;
-}
-input[value="Save"], input[value="Delete this user"], #recommendation_submit {
-}
-input#next {
-  margin: 0;
-}
-textarea, input[type="text"], input[type="password"] {
-	color: #333;
-  padding: 3px 1px;
-  border: 1px solid #BDBDBD;
-  width: 20em;
-}
-input.number {
-  width: 5em;
-}
-textarea {
-  font-family: Lucida Grande, Helvetica, Arial, sans-serf;
-  width: 500px;
-  height: 100px;
-}
-textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
-	color: #000;
-  padding: 2px 0px;
-  border: 2px solid #999;
 }
 ul label {
   display:inline;
@@ -188,17 +159,10 @@ ul label {
   clear: none;
 }
 form ul {
-  margin-top: 1em;
   margin-bottom: 0;
 }
-form ul input[type="checkbox"], form ul input[type="radio"] {
-  margin: 13px 0.5em 1px 0;
-  float: left;
-}
 form li {
-  display: block;
-  clear: both;
-  margin-bottom: 0.7em;
+  list-style: none;
 }
 form li label {
   color: #666;
@@ -275,9 +239,6 @@ table {
 }
 th, table td {
   line-height: 1.2em;
-}
-tr.even {
-  background: url(/images/sprite-layout.png) repeat-x 0 -235px;
 }
 
 /* Table Layout Styles */
