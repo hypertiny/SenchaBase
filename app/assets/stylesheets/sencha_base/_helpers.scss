@@ -1,6 +1,3 @@
-// These styles are included in the Sencha Base application.css manifest file
-// And then shared across all Sencha apps; ID, Devs and Market.
-
 // For image replacement
 .ir {
   display: block;
@@ -32,6 +29,22 @@
   overflow: visible;
   clip: auto;
 }
+
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+.clearfix {
+  display: block; }
+
+* html .clearfix {
+  height: 1%; }
 
 @mixin border-radius($rad) {
   -moz-border-radius: $rad;
