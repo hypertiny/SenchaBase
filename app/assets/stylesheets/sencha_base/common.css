@@ -266,9 +266,9 @@ table.layout tr:hover {
 }
 /* Modules & Other Reusable Elements */
 .block20 {
-	margin-top: 1em;
-	width: 20em;
-	float: left;
+  margin-top: 1em;
+  width: 20em;
+  float: left;
 }
 .clear {
 	width: 100%;
@@ -372,4 +372,14 @@ table.recaptchatable {
   margin-right: 2%;
   float: left;
   padding-bottom: 40px;
+}
+
+/*Reset buttons*/
+input[type="submit"], button {
+  background: transparent;
+  border: none;
+  color: #434343;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
 }
