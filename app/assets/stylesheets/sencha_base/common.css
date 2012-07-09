@@ -158,9 +158,6 @@ ul label {
   float: none;
   clear: none;
 }
-form ul {
-  margin-bottom: 0;
-}
 form li {
   list-style: none;
 }
@@ -193,7 +190,6 @@ li + li > .service_category {
 }
 form ul ul, form ul ul li {
   margin-top: 0;
-  margin-bottom: 0;
 }
 
 form br {

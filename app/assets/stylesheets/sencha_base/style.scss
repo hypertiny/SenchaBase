@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'helpers';
 
 /* tear it down */
 
@@ -52,13 +53,13 @@ html {
 /* stitch it together */
 
 body {
-  background: #EDEDED image-url('_bg-top-grey.png') repeat-x top center;
+  background: #EDEDED image-url('sencha_base/_bg-top-grey.png') repeat-x top center;
   border: 0;
   color: $text;
   font: 14px/20px "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: left;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -78,4 +79,2103 @@ a, a:visited {
 a:hover {
   text-decoration: none;
   color: #111;
+}
+
+/* the headers. */
+
+h1,h2,h3,h4,h5,h6 {
+  color: #314e64;
+  font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, Verdana, Geneva, sans-serif;
+  line-height: 1.1em;
+  text-rendering: optimizeLegibility;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+  text-align: left;
+  color: #66ab16;
+  font-family:"klavika-web-1", "klavika-web-2", sans-serif;
+  font-size: 3em;
+}
+
+h3 {
+  color: #fff;
+  font-family:"klavika-web-1", "klavika-web-2", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+
+h4 {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: left;
+}
+
+nav ul {
+  list-style: none;
+  li {
+    float: left;
+  }
+}
+
+p, ul, ol {
+  margin-bottom: 1em;
+}
+
+hr {
+  clear: both;
+  height: 0;
+  border: 0;
+}
+
+/* general layout */
+
+.heading {
+  padding: 3.6em 0 1.8em;
+  margin-bottom: 1.8em;
+  border-bottom: 1px solid #ddd;
+}
+
+.heading h2 {
+  font-size: 3.6em;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heading {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.box-heading {
+  border-bottom: 1px solid #ddd;
+  clear: both;
+  overflow: hidden;
+  margin-top: 4em;
+}
+
+.box-heading h3 {
+  float: left;
+  border-bottom: 0;
+}
+
+.box-heading .action-items, .heading .action-items {
+  clear: both;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 0 1em;
+}
+
+.box-heading .action-items li, .heading .action-items li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.box-heading .action-items li a, .heading .action-items li a {
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+.box-heading .utility {
+  position: absolute;
+  right: 0;
+}
+
+.box-heading .utility li {
+  float: left;
+  padding: 0 0 0 1em;
+}
+
+.box-heading .utility li a, .box-heading .utility li a:visited {
+  display: block;
+  font-size: 1.2em;
+  padding: .25em .5em;
+  background: #dbecfa;
+}
+
+.box-heading .utility li a:hover {
+  background: #cae0f8;
+}
+
+.box-content {
+  padding: 2em 0;
+  margin: 0 0 4em;
+}
+
+// Styles copied in from Sencha Market (pre-Hypertiny)
+form {
+  font-size: 12px;
+  line-height: 1.4em;
+}
+
+form input, 
+form textarea {
+  background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAMAAABIdo1RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF8vLy2dnZzgvGVQAAABBJREFUeNpiYAQCBhAACDAAACgABekA5OQAAAAASUVORK5CYII=') repeat-x 0 0;
+  border: 1px solid #CCC;
+  font-family: "Helvetica Neue",Arial,"Lucida Grande",sans-serif;
+  font-size: 14px;
+  padding: 5px 3px 4px;
+  @include border-radius(3px);
+}
+
+// From here on are Modules
+
+// This is the main sprite and applies to the following elements:
+#logo, #glow, .image-unavailable, input[type="submit"].product-type-navigation-button {
+  background: image-url('sencha_base/sprite.png') no-repeat;
+}
+
+#header, #content, #footer-content, .search-bar, .search-columns-wrap {
+  margin: 0 auto;
+  width: 870px;
+}
+// so the 'finish your profile' notice can be position relative to this.
+#content {
+  position: relative;
+}
+
+// holds the logo, dev sign in/submit services and Sencha Network dropdown. Applied to <header>
+#header {
+  height: 73px;
+  margin-bottom: 36px;
+  padding-bottom: 3em;
+  padding-top: 36px;
+  position: relative;
+  z-index: 999;
+}
+
+// holds and positions the logo.
+#logo-container {
+  float: left;
+  width: 155px;
+  height: 72px;
+  position: relative;
+  left: -13px;
+}
+
+#glow {
+  background-position: 0 -2152px;
+  display: block;
+  height: 66px;
+  opacity: 0;
+  position: relative;
+  width: 233px;
+  z-index: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  
+  // hover state is declared below, within #logo.
+  
+  // For SenchaID.
+  &.for-id {
+    background-position: 0 -4183px;
+  }
+  
+  // For SenchaDevs.
+  &.for-devs {
+    background-position: 0 -4317px;
+  }
+}
+
+#logo {
+  background-position: 0 -2338px;
+  float: left;
+  width: 233px;
+  height: 72px;
+  margin: 0;
+  position: relative;
+  z-index: 99;
+  overflow: hidden;
+  
+  // add a glow behind logo on hover.
+  &:hover, &:focus, &:active {
+    & + #glow {
+      opacity: 1;
+    }
+  }
+  
+  // hide the link text
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    
+    // hide the image
+    img {
+      display: none;
+    }
+  }
+  
+  // For Sencha ID logo
+  &.for-id {
+    background-position: 0 -4112px;
+    width: 173px;
+  }
+  
+  // For SenchaDevs logo
+  &.for-devs {
+    background-position: 0 -4252px;
+    width: 193px;
+  }
+  
+  // These are for the 3 panels on the ID home page.
+  // For Devs panel on ID homepage
+  &.for-devs-panel {
+    background-position: -57px -4277px;
+    float: none;
+    height: 19px;
+    margin: 20px auto 13px auto;
+    width: 135px;
+  }
+  
+  // For Market panel on ID homepage
+  &.for-market-panel {
+    background-position: -2px -4468px;
+    float: none;
+    height: 19px;
+    margin: 20px auto 13px auto;
+    width: 165px;
+  }
+  
+  // For Forum panel on ID homepage
+  &.for-forum-panel {
+    background-position: -2px -4530px;
+    float: none;
+    height: 28px;
+    margin: 20px auto 4px auto;
+    width: 156px;
+  }
+}
+
+// for IE8, the glow is always visible, for whatever reason. Turn is off 
+// permanently.
+.lt-ie9 #glow {
+  background: none !important;
+}
+
+#siteNav, #util-nav {
+  .pop-nav {
+    background-color: #18222A;
+
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-right-radius: 0;
+    -o-border-top-right-radius: 0;
+    -ms-border-top-right-radius: 0;
+    -khtml-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -o-border-bottom-left-radius: 4px;
+    -ms-border-bottom-left-radius: 4px;
+    -khtml-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -o-border-bottom-right-radius: 4px;
+    -ms-border-bottom-right-radius: 4px;
+    -khtml-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px; 
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+    float: none;
+    font-size: 14px;
+    margin: 0;
+    min-width: 175px;
+    padding: 6px 0;
+    position: absolute;
+    top: 20px;
+    visibility: hidden;
+    z-index: 110;
+  }
+}
+
+// Sencha Network drop down menu.
+#siteNav {
+  color: #CEE7F7;
+  font-size: 12px;
+  line-height: 1.0em;
+  position: absolute;
+  padding-top: 6px;
+  top: 0;
+  left: 0;
+  
+  ul {
+    margin: 0;
+    
+    li {
+      padding: 0 8px;
+      position: relative;
+      
+      a {
+        color: #CEE7F7;
+        display: inline-block;
+        font-weight: bold;
+        padding: 4px 2px;
+        text-decoration: none;
+        
+        &:hover, &:focus, &:active {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+      
+      // applies to link.
+      .dropdown {
+        background: image-url('sencha_base/dropdown-arrow-down.png') no-repeat right 55%;
+        padding-right: 14px;
+      }
+    }
+  }
+  
+  .pop-nav {
+    left: 0;
+    
+    a {
+      padding: 6px 0;
+    }
+  }
+}
+
+.zero {
+  list-style: none;
+}
+
+#docs-dropdown {
+  left: 0;
+  width: 140px;
+}
+
+// Dev sign in / List your services
+#util-nav {
+  color: #CEE7F7;
+  font-size: 12px;
+  line-height: 1.0em;
+  position: absolute;
+  padding-top: 6px;
+  top: 0;
+  right: 0;
+  
+  li {
+    padding: 0 8px;
+    position: relative;
+    
+    // when a item is not a link, e.g. email address before we have a profile               
+    //page. Align with other links
+    span {
+      display: block;
+      padding-bottom: 3px;
+      padding-top: 5px;
+    }
+    
+    a {
+      color: #CEE7F7;
+      display: inline-block;
+      font-weight: bold;
+      padding: 4px 2px;
+      text-decoration: none;
+      
+      &:hover, &:focus, &:active {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .pop-nav {
+    left: -8px;
+    width: 222px;
+    
+    label {
+      color: #0A81CC;
+      display: inline;
+    }
+    
+    input {
+      font-weight: bold;
+      background: #ECF5FC;
+      display: block;
+      font-size: 13px;
+      margin: 3px 0 12px;
+      padding: 8px 3px 5px;
+      color: #0D66A3;
+      text-shadow: white;
+    }
+    
+    input.checkbox {
+      background-color: transparent;
+      background-image: none;
+      border: none;
+      width: auto;
+      display: inline;
+    }
+    
+    button {
+      float: left;
+      font-family: 'Helvetica Neue',Arial,'Lucida Grande',sans-serif;
+      font-size: 14px;
+      margin: 0 14px 16px 2px;
+    }
+    
+    .register-link {
+      color: #CEE7F7;
+      font-weight: bold;
+      font-size: 12px;
+    }
+  }
+  
+  li + li {
+    border-left: 1px solid #064B80;
+  }
+}
+
+#market_forum_login_form {
+  padding: 4px 16px;
+  text-align: left;
+  
+  a {
+    margin: 0;
+  }
+}
+
+// Big green button for primary actions.
+
+// Separate font weights and line height from links and inputs
+// rendering differently, weirdly.
+
+// Input Buttons
+form button,
+input[type="submit"] {
+  font-weight: 400; // set bolds differently for white on green weight to match.
+  padding: 7px 8px 8px;
+  
+  // modify weights to match link weights.
+  &.secondary {
+    font-weight: 500;
+    padding: 6px 8px 9px;
+  }
+}
+
+// Links which look like big green buttons
+a.button-link {
+  font-weight: bold;
+  padding: 6px 8px 9px;
+}
+
+// Here's the big green button
+form button.button-links,
+input[type="submit"].button-link,
+.button-link,
+a.button-link {
+  background: #4C8E0E image-url('sencha_base/button-bg.png') 0 -301px repeat-x;
+  @include background-clip;
+  border: 1px solid #477A09;
+  @include border-radius(3px);
+  color: #fff;
+  display: block;
+  font-family: "Helvetica Neue",Arial,"Lucida Grande",sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+  text-decoration: none;
+  text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
+  
+  &:hover, &:focus, &:active {
+    background-position: 0 -263px;
+    background-color: #3A730B;
+  }
+  
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+  
+  // Display button inline
+  &.inline {
+    display: inline;
+    cursor: pointer;
+  }
+  
+  &.center {
+    text-align: center;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  
+  // make the button smaller - there are two sizes, standard and smaller
+  &.smaller {
+    font-size: 12px;
+    line-height: 8px;
+  }
+  
+  // grey button for secondary actions
+  &.secondary {
+    background-position: 0 -374px;
+    background-color: #E8E8E8;
+    border-color: #C2C2C2;
+    color: #516F83;
+    // font-weight modified above especially for inputs.
+    text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+
+    &:hover {
+      background-position: 0 -339px;
+      background-color: #D4D4D4;
+    }
+  }
+  
+  // blue button for tertiary actions
+  &.tertiary {
+    background-position: 0 -149px;
+    background-color: #0D66A3;
+    border-color: #073A5C;
+
+    &:hover, &:active, &:focus {
+      background-color: #004A92;
+      background-position: 0 -111px;
+    }
+  }
+  
+  // red delete button, ala iOS.
+  &.delete {
+    background-image: none;
+    background: darken(#E28E90, 5%);
+    border: 1px solid darken(#E28E90, 10%);
+    color: #fff;
+    text-shadow: darken(#E28E90, 20%) 0px 1px 0px;
+
+    &:hover, &:focus, &:active {
+      background: darken(#E28E90, 12.5%);
+    }
+  }
+  
+  // position Search button on Devs home page.
+  &.search-button {
+    height: 32px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+
+// End of Buttons //
+
+
+// Let the Hero Begin
+
+#hero {
+  background: #f8f8f8;
+  height: 297px;
+  margin: -78px 0 0 0;
+  padding-bottom: 62px;
+  position: relative;
+  width: 100%;
+}
+.hero-content-wrap {
+  padding-top: 93px;
+  text-align: center;
+}
+.hero-heading {
+  font-family: "klavika-web-1","klavika-web-2",sans-serif;
+  font-weight: 200 !important;
+  font-size: 48px;
+}
+.hero-p {
+  color: #314d64;
+  margin: 1px auto 0 auto;
+  width: 420px;
+}
+.hero-form {
+  margin-top: 38px;
+}
+
+// Let the footer begin
+
+#footer {
+  background: #EDEDED;
+  border-top: 1px solid #D5D5D5;
+  color: #47667B;
+  font-size: 12px;
+  line-height: 1.0em;
+  min-width: 870px;
+  padding: 20px 0;
+  text-align: left;
+}
+
+#footer-nav {
+  position: relative;
+  
+  .columns {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    width: 635px;
+  }
+  
+  .column {
+    float: left;
+    min-height: 148px;
+    margin: 0 0 24px 0;
+    text-align: left;
+    width: 127px;
+  }
+  
+  // moves the social list to the right, imitating two empty columns.
+  .dev-social {
+    margin-left: 254px;
+  }
+  
+  ul {
+    margin: 0;
+  }
+  
+  // make the headings of groups of footer links bold and blue
+  a, a.main, strong, strong a {
+    color: $blue;
+    display: block;
+    line-height: 18px;
+    margin-bottom: 0;
+    padding-right: 5px;
+    text-decoration: none;
+    text-shadow: #FEFEFE;
+  }
+
+  a:hover, input[type="submit"] {
+    &:hover, &:active, &:focus {
+      text-decoration: underline;
+    }
+  }
+  
+  ul li {
+    float: none;
+    
+    li {
+      float: none;
+      display: block;
+      
+      a, input[type="submit"] {
+        color: #666;
+        
+        // Redeclared for Submit buttons
+        font-size: 12px;
+        line-height: 18px;
+        padding: 0;
+        
+        // required for IE7
+        text-align: left;
+      }
+      
+      &.last {
+        margin-bottom: 18px;
+      }
+      
+      a {
+        color: #666;
+      }
+    }
+  }
+}
+
+#footer-content {
+  
+  hr {
+    background-color: #E0E0E0;
+    border: none;
+    clear: both;
+    color: #E0E0E0;
+    height: 1px;
+    margin-bottom: 24px;
+    outline: none;
+  }
+  
+  .email-signup-form {
+    margin-left: 662px;
+    margin-bottom: 20px;
+    position: relative;
+    
+    button {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      margin-top: 0;
+      margin-left: 3px;
+    }
+    
+    label {
+      margin-bottom: 4px;
+      text-align: left;
+      
+      span {
+        color: #434343;
+        display: block;
+        font-size: 12px;
+        font-weight: normal;
+        margin-bottom: 8px;
+      }
+    }
+    .thanks {
+      display: none;
+    }
+  }
+  
+  .like-tweet {
+    padding-top: 24px;
+  }
+}
+
+.email-field, .simple-text-input {
+  border-color: #C2C2C2;
+  font-size: 12px;
+  float: left;
+  height: 14px;
+  padding-bottom: 3px;
+  width: 130px;
+  margin: 0;
+  
+  &:focus {
+    background-image: none;
+  }
+}
+
+// add a little top space between the search field and breadcrumb on the 
+// search results page.
+.simple-text-input, .search-location {
+  margin-top: 7px;
+}
+// align the search input field with the search button
+.search-location {
+  position: relative;
+  top: 7px;
+  left: 3px;
+  
+  &:active {
+    top: 8px !important;
+  }
+}
+
+.lt-ie8 .search-location {
+  height: 24px;
+  position: relative;
+  left: 4px;
+}
+
+// Firefox - decided to use this workaround instead of investing more time in 
+// solving this issue.
+@-moz-document url-prefix() {
+  .search-location {
+    height: 32px;
+    position: relative;
+    top: 3px;
+  }
+}
+
+// Opera - another horrible hack - but best compromise at this time.
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+  .search-location {
+    height: 32px;
+    position: relative;
+    top: 3px;
+  }
+}
+
+// Set height of search text field to match Devs
+.simple-text-input {
+  &.for-search {
+    height: 15px;
+  }
+}
+
+.field_with_errors, .field_with_hint {
+  position: relative;
+}
+
+.hint, .error {
+  display: block;
+  left: 480px;
+  position: absolute;
+  width: 356px;
+}
+
+// hint for form field.
+.hint {
+  color: #777;
+  margin-top: -23px;
+}
+
+// Make the error red.
+.error {
+  color: darken(#E28E90, 25%);
+  margin-top: -30px;
+}
+
+.error span, label span {
+  color: #C00;
+  font-weight: bold;
+}
+
+a.more-icon {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAAHeq0ewAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZRJREFUeNpi/P//PwMIMIGI/IWHLAECiFEoZaYfiCcBEEDMQFbIhK521hPshr4AAcQA5PACsRVYw8w9l/VBDCAWYRRLm538598/5rez0xYABBBINy9QcyTYTEbGf0D8/+XMlLkgEw0YoODf//87QTqATBlGmAuAQBiI2YH4FRD/AQggsIRw6iwrIEcEiPcDzf/MPPmpVCKQI5njrnf71N2Xrm+//HjCwsXO8rU20OxmmrPO50PXn+1be/KOM9O3n38EKlccMweqfnrp0Rs7cQGuj4xaJYvVX3z4Zs/MxPiPkQHstH0wF7AAsRgQ/wTitwABBrNdAchxBGJWmIeAbmcC0n8EudkP3eqPuwMWByq0BdJuMIUg8HpW6j49OZF9IHmgK52s6ld7g2wBWSPOx8n2CeiFSzsvPvoAVf92f23QT6BBPxkZGdxefPjKD4oDkOJ9n3/8CmrbcMYGZnL9mhPnp+y8pAsyDeiJfw0hFleA7B/woAR6W/z4reeGzz98A5nCIAn0ermf8SNPA4VvQO4bIP4CAPd8rOL3T4YVAAAAAElFTkSuQmCC');
+}
+
+a.more-icon{
+  background-repeat: no-repeat;
+  background-position: right center;
+  color: #126499;
+  font-size: 12px;
+  font-weight: bold;
+  padding-right: 16px;
+}
+
+// applies to p, link to Sencha Developers in footer, bottom-left.
+.footer-developer-link {
+  float: left;
+  margin-bottom: 0;
+  width: 50%;
+}
+
+#copyright {
+  color: #999;
+  float: right;
+  width: 210px;
+  
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.fb_reset {
+  background: none;
+  border-spacing: 0;
+  border: 0;
+  color: black;
+  cursor: auto;
+  direction: ltr;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  visibility: visible;
+  white-space: normal;
+  word-spacing: normal;
+}
+
+#footer-nav .social a.facebook,
+#footer-nav .social a.linkedin,
+#footer-nav .social a.tumblr,
+#footer-nav .social a.twitter,
+#footer-nav .social a.vimeo {
+  background: url('sencha_base/social.png') no-repeat;
+}
+
+#footer-nav .social a.facebook {
+background-position: 0 -68px;
+}
+#footer-nav .social a.linkedin {
+background-position: 0 -91px;
+}
+#footer-nav .social a.twitter {
+background-position: 0 -137px;
+}
+#footer-nav .social a.tumblr {
+background-position: 0 -114px;
+}
+#footer-nav .social a.vimeo {
+background-position: 0 -160px;
+}
+
+#footer-nav .social a {
+color: #333;
+padding-left: 18px;
+}
+
+
+// for the nav to the right of the logo.
+#nav {
+  float: right;
+  margin-top: 20px;
+  
+  ul {
+    float: right;
+    margin-right: -15px;
+  }
+  
+  li {
+    height: 27px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    
+    a.main {
+      color: #F8FCFF;
+      display: inline-block;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.0em;
+      text-decoration: none;
+      height: 27px;
+      padding: 5px 15px 4px;
+      
+      &:hover, &:focus, &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Main big green button that sits to the right in the navy banner.
+// Position the button, styled by .green-link
+.banner-action {
+  position: relative;
+  top: 5px;
+}
+
+// applies to span - 'Show your Skills. Reach more prospects'.
+.action-motivation {
+  color: #cde5f8;
+  line-height: 31px;
+  margin-right: 10px;
+  
+  // When the green button is accompanied by text, remove top positioning from 
+  // the button.
+  & + .banner-action {
+    top: 0;
+  }
+}
+
+// Select drop down for selecting location.
+.select-location {
+  display: inline-block;
+  height: 33px;
+  width: 210px;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555555;
+  border: 1px solid #cccccc;
+  @include border-radius(3px);
+}
+
+// Firefox - decided to use this workaround instead of investing more time in 
+// solving this issue.
+@-moz-document url-prefix() {
+  .select-location {
+    position: relative;
+    top: -4px;
+  }
+}
+
+// Opera - another horrible hack - but best compromise at this time.
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+  .select-location {
+    height: 32px;
+    position: relative;
+    top: 3px;
+  }
+}
+
+// Position the Search button on the devs home page in IE7
+.lt-ie9 .find-developer-form .button-link {
+  position: relative;
+  top: -2px;
+}
+
+// Position the Search button on the devs home page in IE7
+.lt-ie8 .find-developer-form .button-link {
+  position: relative;
+  top: -16px;
+}
+
+// wraps the search results; search field, results, list and filter options.
+#content-wrapper {
+  background: #F8F8F8;
+  margin: -78px 0 0 0;
+  min-height: 148px;
+  padding: 15px 0 84px 0;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  z-index: 1000;
+}
+
+.loading-indicator {
+  display: none; 
+}
+
+.loading-indicator.visible {
+  display: inline;
+}
+
+// holds 'showing developers from..., Filter options and list of devs (search results)
+.search-results-column {
+  clear: both;
+  float: left;
+  margin-bottom: 86px;
+  overflow: hidden;
+}
+
+// holds filter options for search results.
+.search-filters {
+  background: #ECECEC;
+  @include border-radius(5px);
+  float: left;
+  line-height: 16px;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+
+  &.open {
+    display: block;
+  }
+}
+
+// applies to <div> wrapping the search filter cateory tabs, when Edit Search is open.
+.search-filter-tabs {
+  background: darken(#ECECEC,5%);
+  @include topside_rounded_border(5px, 5px);
+  -webkit-box-shadow: inset 0px -1px 3px #ccc;
+  -moz-box-shadow: inset 0px -1px 3px #ccc;
+  box-shadow: inset 0px -1px 3px #ccc;
+  
+  a, a:link, a:visited {
+    display: inline-block;
+    padding: 7px 14px;
+  }
+}
+
+// list of search category tabs.
+.search-filter-tabs-list {
+  margin-bottom: 0;
+  
+  // line up horizontally.
+  li {
+    display: inline;
+    font-weight: bold;
+    @include transition(all, .3s, ease-in-out);
+    
+    // for the first item, round the corner and apply extra left padding.
+    &:first-child {
+      a, a:link, a:visited {
+        @include top_left_rounded_border(5px);
+        border-left: none !important;
+      }
+    }
+    
+    a, a:link, a:visited {
+      border-right: 1px solid #DFDFDF;
+      border-left: 1px solid #DFDFDF;
+      color: lighten(#434343,20%);
+    }
+    
+    a:hover, a:focus, a:active {
+      color: #434343;
+    }
+  }
+}
+
+
+// link for switching tabs
+a[data-behaviour='toggle-filter-tab'] {
+  cursor: pointer;
+  &.active {
+    background: #ECECEC;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    color: #434343;
+  }
+}
+
+// Applies to <a> for Done link to close Edit filter options.
+.search-filter-done {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+// filter options box and heading.
+.filter-options-tab {
+  padding: 12px;
+  
+  h4 {
+    color: #4B4C57 !important;
+    font-size: 14px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    // on hover darken.
+    &:hover, &:focus, &:active {
+      color: darken(#4B4C57,10%) !important;
+      cursor: pointer;
+    }
+    .toggle-filter {
+      position: absolute;
+      right: 1px;
+      
+      &:after {
+        content: '-';
+      }
+      
+      &.is-closed:after {
+        content: '+';
+      }
+    }
+  }
+}
+
+// applies to the <ul> holds 'show more/less' and 'clear' filter controls.
+.filter-options-tab-list {
+  margin-left: 4px;
+  li {
+    display: inline-block;
+    width: 73px; // gives 14px spacing
+    
+    a, a:link, a:visited {
+      cursor: pointer;
+    }
+  }
+}
+
+// holds list of attributes by which a category can be filtered, applied to <ul>. e.g. location: us, ireland, dublin...
+.filter-options-list {
+  margin-left: 0; // remove base.
+  margin-bottom: 0; // remove base
+  margin-top: 5px; // another 5px added at the bottom of the h4 to allow some 
+                   // spacing between the toggle icon and the scrollbar.
+  overflow: hidden; /* TODO: check */
+  
+  li {
+    float: left; /* TODO: check */
+    width: 167px; /* TODO: check */
+    font-size: 12px;
+    height: 20px;
+    line-height: 19px;
+    margin-bottom: 3px;
+    padding: 2px 0 0 3px;
+    position: relative;
+    
+    // link for showing all filter options
+    a {
+      cursor: pointer;
+    }
+
+    &:hover, &:focus, &:active {
+      background: #fff;
+    }
+  }
+  li.filter-option-hidden {
+    display: none;
+  }
+  
+  // for the list of Budget values in Edit Search, stack vertically, instead of vertically.
+  &.budget, &.company-size {
+    li {
+      width: 132px;
+    }
+  }
+}
+
+
+
+// this is the roundy pill that holds the number for each filter option.
+.filter-option-pill {
+  background: lighten(#434343,50%);
+  @include border-radius(7px);
+  color: #fff;
+  margin-right: 4px;
+  padding: 0 4px;
+}
+
+// holds the label and checkbox for each filter category attribute.
+.filter-option-name {
+  label {
+    cursor: pointer;
+    position: absolute;
+    left: 22px;
+    top: 1px;
+  }
+  
+  .filter-option-quantity {
+    background: #fff !important;
+    @include border-radius(10px);
+    -moz-box-shadow: white;
+    -webkit-box-shadow: white;
+    -o-box-shadow: white;
+    box-shadow: white;
+    color: #999;
+    display: inline-block;
+    float: right;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.0em;
+    padding: 2px 10px 3px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 3px;
+    vertical-align: middle;
+  }
+  
+  input[type='checkbox'] {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+  }
+}
+
+// make the top and bottom border lines of the filter options extend across the page.
+.results-statement {
+  width: 870px;
+}
+
+// 'Showing developers from...' - Also the H1 is the main heading on pages like Developer/show for the develer name.
+.results-statement, .top-block.border {
+  border-bottom: 1px solid #D5D5D5;
+  border-top: 1px solid #D5D5D5;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 15px;
+  position: relative;
+
+  p, h1.alt {
+    color: #314E64;
+    font-family: "klavika-web-1", "klavika-web-2", sans-serif;
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+}
+
+
+// make h3 similar to paragraph. Used on 'Filtered By:' for search results.
+h3, span {
+  &.normalise {
+    border: none;
+    color: #314E64;
+    display: inline;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+  
+  // bold it.
+  &.bold {
+    font-weight: bold;
+  }
+  &.left {
+    float: left;
+    line-height: 22px;
+    margin-right: 5px;
+    margin-top: 2px;
+    margin-bottom: 0;
+    padding-bottom: 8px
+  }
+  
+  // add the word 'and', cosmetica only.
+  &.generate-and:after {
+    content: 'and';
+  }
+}
+
+// add bottom padding to the 'Showing developers...' search results heading.
+h3.normalise {
+  height: 30px;
+  padding-bottom: 0;
+}
+
+// wraps the div holding the Filter By:, term and 'x' - remove link.
+.filter-statement-term-wrap {
+  background: lighten(#314E64,90%);
+  @include border-radius(3px);
+  border: 1px solid lighten(#314E64,60%);
+  color: #314E64;
+  cursor: default;
+  font-size: 16px;
+  line-height: 28px;
+  margin-right: 5px;
+  padding-left: 7px;
+  position: relative;
+  
+  // change bg of service filter items.
+  &.service {
+    background: lighten(#314E64,67.5%);
+  }
+  
+  // change bg of company size filter items.
+  &.budget {
+    background: lighten(#314E64,67.5%);
+  }
+}
+
+// IE7 - set height and horizontally align filter tags.
+.lt-ie9 .filter-statement-term-wrap {
+  height: 32px;
+  margin-top: -6px;
+  padding-top: 5px;
+  
+  .icon-remove {
+    margin-right: 11px;
+  }
+}
+
+.filter-statement-term-icon {
+  color: #96B4CB;
+  font-size: 17px;
+  position: absolute;
+  width: 0 !important;
+}
+
+.lt-ie8 .filter-statement-term-icon {
+  top: 4px;
+}
+
+.icon-remove {
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+  width: 0 !important;
+}
+
+// applies to <span>, holds the text of the filter item, e.g. 'United States'.
+.filter-statement-term {
+  // give some left margin to allow space for the location icon.
+  &.location-space {
+    margin-left: 13px;
+  }
+  // give some left space for the company size icon.
+  &.company-size-space {
+    margin-left: 18px;
+  }
+  
+  // makes the $ the same color as the icons.
+  .currency {
+    color: lighten(#314E64,30%);
+  }
+}
+
+// applies to <a> with the 'x' for removing a filter.
+.remove-filter {
+  color: lighten(#314E64,40%) !important;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 22px;
+  padding: 0 10px 0 4px;
+  position: relative;
+  top: -2px;
+  @include transition(all, .2s, ease-in-out);
+  
+  // darker green on hover.
+  &:hover, &:focus, &:active {
+    color: #314E64 !important;
+  }
+}
+
+// applies to list of applied filters.
+.filter-statement-list {
+  margin-bottom: 0;
+  li {
+    float: left;
+    height: 32px;
+  }
+}
+
+// control size and position of location icon
+// control size of company icon
+.location-icon, .company-size-icon, .endorsements-icon {
+  font-size: 16px;
+  position: relative;
+  top: 1px;
+}
+
+// use font awesome icon library.
+[class^="icon-"],
+[class*=" icon-"] {
+  
+  // primary icon style for Web Symbols
+  &.primary {
+    color: lighten(#9F9F9F,15%);
+    cursor: pointer;
+    font-size: 18px;
+
+    // Turn tick green on hover
+    &:hover, &:focus, &:active {
+      color: #93C33C;
+    }
+    
+    // make the trash can red on hover.
+    &.icon-trash {
+      &:hover, &:active, &:focus {
+        color: darken(#E28E90, 5%);
+      }
+    }
+  }
+
+  // close 'x' for showing fewer filter options in search results.
+  &.show-fewer-filter-options {
+    color: #4B4C57;
+    font-size: 16px;
+    position: absolute;
+    right: -6px;
+    top: -7px;
+    z-index: 1000;
+
+    // on hover darken.
+    &:hover, &:focus, &:active {
+      color: darken(#4B4C57,10%) !important;
+      cursor: pointer;
+    }
+
+    // add the 'x' icon semantically.
+    &:after {
+      content: '×';
+    }
+  }
+}
+
+// position the 'Edit Search' button-style link.
+.edit-search {
+  color: darken(#D5D5D5,40%);
+  position: absolute;
+  right: 1px;
+  top: 0;
+  
+  &:hover, &:focus, &:active {
+    color: darken(#D5D5D5,60%);
+    cursor: pointer;
+    
+    // Move to hover sprite.
+    .edit-search-icon {
+      background-position: right -10px;
+    }
+  }
+}
+
+.meta-datum {
+  // line up horizontally budget and size
+  &.inline {
+    display: inline;
+  }
+}
+
+// Developer name on search results list
+.search-results-list h2, h4 {
+  color: #4B4C57 !important;
+  font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: 4px;
+  margin-top: 1em;
+  text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 1px;
+}
+
+// applies to the <ul> holding the list of developers and their info.
+.search-results-list {
+  margin-left: 0; // 18px applied by default.
+  
+  > li {
+    background: #fff;
+    @include border-radius(5px);
+    margin-bottom: 14px;
+    padding: 1px 12px;
+    position: relative;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    
+    // When the li is hovered over, several child elements change.
+    &:hover, &:focus, &:active {
+      background: #ECECEC;
+      
+      // make h2, developer name, blue on hover.
+      h2,
+      .search-results-list-budget,
+      .search-results-list-size,
+      .search-results-list-location,
+      .search-results-list-endorsements {
+        color: #0D66A3 !important;
+      }
+    }
+  }
+}
+
+// make the $ bold in search results list
+.currency-unit {
+  font-weight: bold;
+  margin-right: 1px;
+}
+
+// list for each developer in search results, including budget, no. of people and location 
+.developer-attributes-list {
+  margin-left: 0; // remove base.
+  margin-bottom: 8px;
+  
+  // Prevent line breaks between icon and label
+  li {
+    white-space: nowrap;
+  }
+}
+
+
+// line these up horizontally
+.search-results-list-budget, .search-results-list-size, .search-results-list-location, .provider-level-item, .search-results-list-endorsements {
+  color: #314E64;
+  display: inline-block;
+}
+
+.search-results-list-location, .search-results-list-budget, .search-results-list-size {
+  margin-right: 14px;
+}
+
+// reduce size or Services: heading and list of services, and make grey.
+.developer-services, .developer-services-list {
+  color: #434343 !important;
+  float: left;
+  font-size: 12px !important;
+  margin-left: 0; // remove list base.
+  
+  li {
+    display: inline;
+    
+    &:after {
+      content: ', ';
+    }
+    
+    &:last-child:after {
+      content: '';
+    }
+  }
+}
+
+.developer-services-list {
+  line-height: 16px;
+  width: 550px;
+}
+
+// position the provider level badge on the search results page, inline with the other icons.
+.search-results-provider-level {
+  display: inline-block;
+  left: 12px;
+  position: relative;
+  top: -3px;
+  
+  // nudge the provider level icon back up a little but on developer#show.
+  &.show {
+    top: -1px;
+  }
+}
+
+// place the Gold or Silver developer level icon.
+.provider-level {
+  background-size: 78%;
+  height: 24px;
+  width: 17px;
+  
+  // Gold
+  &.gold {
+    background: url('sencha_base/sencha-gold.png') no-repeat;
+  }
+  
+  // Silver
+  &.silver {
+    background: url('sencha_base/sencha-silver.png') no-repeat;
+  }
+}
+
+// vbform e.g. log in form
+.standard_error {
+  margin: 0 auto;
+}
+.block {
+  background: transparent none;
+  clear: both;
+  padding: 0;
+}
+.formcontrols {
+  border: 1px solid #D7D7D7;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.blockbody {
+  background: #fff none no-repeat;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.blocksubhead {
+  color: #4B4C57;
+  background: #EBF4FB;
+  border-bottom: none;
+  font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  margin-bottom: 0;
+  padding: 4px 10px;
+
+  // when a subhead appears not at the top, as anything but the first, then remove the bottom spacing.
+  &.alt {
+    border-top: 1px solid #CECECE;
+    margin-bottom: 0;
+  }
+}
+.formcontrols .blocksubhead:first-child {
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.formcontrols .blockrow, .formcontrols .input, .input-wrap-likeness {
+  background: transparent;
+  border-top: solid 1px #EEE;
+  padding: 18px 18px 12px;
+
+  // when an input is prefixed with a currency, reduce label size to maintain textfield left alignment.
+  &.prefixed {
+    label {
+      width: 202px;
+    }
+    input {
+      padding-left: 16px;
+    }
+  }
+  
+  // for select fields, make the continers the same height as all others.
+  &.select {
+    height: 31px;
+    
+    select {
+      font-size: 14px;
+      option {
+        font-size: 14px;
+      }
+    }
+  }
+  
+  // to set a smaller height blockrow - e.g. for email field container on Forgot Password.
+  &.smaller {
+    height: 20px;
+  }
+  
+  // make the Number of Employees, and some other, select field width smaller.
+  &.employee-number, &.small {
+    select {
+      width: 78px;
+    }
+  }
+  
+  // make select field width medium size.
+  &.medium {
+    select {
+      width: 112px;
+    }
+  }
+
+  // make select inputs the same width as input textfields.
+  select {
+    width: 248px;
+  }
+  
+  // remove border and size text for file inputs.
+  input[type='file'] {
+    border: none;
+    background: transparent;
+    color: #434343;
+    font-size: 13px;
+    padding-left: 0;
+  }
+  
+  // the $ prefix - pull up to baseline align.
+  .prefix {
+    font-size: 14px;
+    position: relative;
+    top: -3px;
+    left: 18px;
+    z-index: 100;
+  }
+}
+
+.formcontrols .blockrow, .formcontrols .input, .input-wrap-likeness {
+  &:first-child {
+    border-top: none;
+  }
+}
+.formcontrols .blocksubhead {
+font-weight: bold;
+}
+body.marketplace h2, body.marketplace h3, body.marketplace h4, body.marketplace h5, body.marketplace h6 {
+color: #4B4C57;
+}
+.floatcontainer, .formcontrols .blockrow, dl.stats {
+display: block;
+}
+* html .floatcontainer, .formcontrols .blockrow, dl.stats {
+height: 1%;
+}
+
+// Breadcrumbs.
+nav.bc {
+  color: #AAA;
+  padding-bottom: 2px;
+  margin-top: -5px;
+  font-size: 15px;
+
+  // Add the forward slash between breadcrumb items
+  span:after {
+    content: '/';
+  }
+  
+  a:hover, a:focus, a:active {
+    text-decoration: underline;
+  }
+}
+nav.bc a {
+  color: #AAA;
+}
+nav.bc span {
+  color: #E8E8E8;
+  font-size: 17px;
+  &.translation_missing {
+    color: #AAA;
+    font-size: 15px;
+  }
+}
+
+// IE7
+.lt-ie8 nav.bc {
+  line-height: 20px;
+}
+
+// end crumbs
+
+.formcontrols .blockrow input.textbox:focus, .formcontrols .blockrow textarea:focus, .formcontrols .input input:focus {
+  background: #F2F6F8 none;
+}
+.formcontrols .blockrow .primary {
+  width: 248px;
+
+  // raise text box a little to keep alignment with label consistent with market.sencha.dev.
+  &.textbox {
+    position: relative;
+    top: -3px;
+  }
+  
+  // And when it's a textarea set height to 3x height of an textfield.
+  &.text-area {
+    height: 92px;
+  }
+}
+.formcontrols .blockrow.singlecheck label {
+  float: left;
+}
+
+// vertically align the select input.
+.blockrow.singlecheck.select {
+  height: 31px;
+}
+
+// adjust top padding, so top and bottom are even when the submit button is 
+// featured.
+.formcontrols .blockrow {
+  &.singlecheck.submit {
+    margin-top: 12px;
+    padding-top: 13px;
+    position: relative;
+    
+    // remove extra top margin.
+    &.alt {
+      margin-top: 0;
+    }
+  }
+  &.recaptcha {
+    margin-bottom: 6px;
+  }
+}
+
+.formcontrols .blockrow .group,
+.formcontrols .input .group {
+width: 100%;
+}
+
+.formcontrols input, select, textarea {
+  @include box-sizing;;
+}
+.blockrow, .input {
+  a, a:link, a:visited {
+    color: #126499;
+    font-size: 14px;
+    
+    // On Submit a Request - reduce link size to same as p.explanation.
+    &.explanation {
+      font-size: 13px;
+    }
+  }
+  a:hover, a:focus, a:active {
+    text-decoration: underline;
+  }
+}
+
+.vbform {
+  .explanation  {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  
+  // alternative form input hint, for servies-list.
+  .alt-hint {
+    margin-left: 212px;
+    width: 320px;
+  }
+  
+  // Character count, 'X remaining'.
+  .charCount {
+    color: #777;
+    font-size: 11px;
+    line-height: 150%;
+  }
+}
+
+// for list of services on developers show
+.services-list.alt {
+  
+  li {
+    float: left;
+    height: 20px;
+    position: relative;
+    width: 207px;
+  }
+}
+
+// applied to <ul> for the list of services a user joining the directory can 
+// choose.
+.formcontrols .blockrow .services-list {
+  margin-left: 209px;
+  
+  label {
+    float: none;
+  }
+  
+  li {
+    float: left;
+    height: 20px;
+    position: relative;
+    width: 207px;
+    
+    input {
+      position: absolute;
+      top: 4px;
+    }
+    
+    label {
+      position: absolute;
+      left: 26px;
+    }
+  }
+}
+
+// helpers
+
+.hidden {
+  display: none !important;
+}
+
+// Canel link beside submit button usually a blue link in a div.
+// -neighbour is applied to a submit button beside the .cop-out div.
+.cop-out, .cop-out-neighbour {
+  float: left;
+}
+.cop-out {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  
+  a, a:link, a:visited {
+    font-size: 13px;
+  }
+}
+
+// list of items, appears on the Dashboard, e.g. 'See all endorsements', 'Ask a customer for an endorsement'.
+.utility-list {
+  float: right;
+  position: relative;
+  top: 7px;
+  li {
+    display: inline;
+  }
+}
+
+// notice to prompt user to finish their profile, and then to Activate their listing.
+.verification-notice {
+  background: #7EB83C;
+  border: 1px solid #7EB83C;
+  border-top: 0;
+  @include btm_right_rounded_border(3px);
+  @include btm_left_rounded_border(3px);
+  @include box-shadow(0px, 1px, 3px, rgba(0, 0, 0, 0.5));
+  color: #fff;
+  font-weight: bold;
+  padding: 14px;
+  position: relative;
+  text-shadow: darken(#7EB83C,20%) 0px 1px 0px;
+  top: -15px;
+  @include transition(all, .25s, ease-in-out);
+  z-index: 10000;
+  
+  p span {
+    color: lighten(#7EB83C, 45%);
+  }
+}
+
+// applied to Activate notice text to limit the paragraph measure.
+.good-measure {
+  width: 500px;
+}
+
+// applies to <ul> with the .validation-notification.
+.validation-message {
+  color: darken(#7EB83C, 30%);
+  list-style-type: disc;
+  margin: 0 0 0 18px;
+  
+  li {
+    float: left;
+    list-style-type: disc;
+    margin-right: 37px;
+    width: 116px;
+    span {
+      color: #fff;
+    }
+  }
+  
+  
+  // when there is an action button limit the width of the ul to make room for it.
+  &.with-action {
+    width: 624px;
+    
+    // make the items shorter to sit more snugly.
+    li {
+      width: 80px;
+    }
+  }
+}
+
+.struck-off {
+  color: lighten(#7EB83C,40%) !important;
+  text-decoration: line-through;
+  text-shadow: darken(#7EB83C,2.5%) 0px 1px 0px;
+}
+
+// applies to <ul>, the list of developers you are sending a request to on 'Submit a request'.
+.developer-request-list {
+  margin-bottom: 6px;
+  
+  // line up horizontally.
+  li {
+    display: inline;
+    
+    // add comma and a space.
+    &:after {
+      content: ", ";
+    }
+    
+    // remove comma from the second last item.
+    &:nth-last-child(2) {
+      // remove comma and space after second last item.
+      &:after {
+        content: "";
+      }
+    }
+    
+    &:last-child {
+
+      // remove comma and space after last item.
+      &:after {
+        content: "";
+      }
+      
+      // add 'and' before last item.
+      &:before {
+        content: "and ";
+      }
+    }
+    
+    // if only one list item, remove and
+    &:first-child {
+      &:before {
+        content: "";
+      }
+    }
+  }
+}
+
+// applies to <div> - table allows centering without declaring width.
+.flash_notice {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  z-index: 10000;
+  
+  
+  // flash for Sencha Devs has 1px difference. (couldn't determine why)
+  &.for-devs {
+    top: 77px;
+  }
+  
+  // for IE6 a notice is shown to encourage the user to install a new browser or 
+  // install chromeframe for IE6. This positions that notice.
+  &.chromeframe {
+    top: 0px;
+    
+    a, a:link, a:visited {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+  
+  p {
+    @include border-radius(2px);
+    @include box-shadow(0px, 1px, 7px, rgba(0, 0, 0, 0.3));
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 0;
+    padding: 6px 12px;
+    &.alert, &.error, &.warning {
+      background-color: #bc2f00;
+      border: 1px solid darken(#bc2f00, 5%);
+      border-bottom: none;
+      text-shadow: darken(#bc2f00, 10%) 0px 1px 0px;
+    }
+    &.notice {
+      background-color: #76AC38;
+      border: 1px solid darken(#81B93B, 5%);
+      border-bottom: none;
+      text-shadow: darken(#81B93B, 10%) 0px 1px 0px;
+    }
+  }
 }
