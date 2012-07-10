@@ -973,34 +973,32 @@ a.more-icon{
   white-space: normal;
   word-spacing: normal;
 }
-
 #footer-nav .social a.facebook,
 #footer-nav .social a.linkedin,
 #footer-nav .social a.tumblr,
 #footer-nav .social a.twitter,
 #footer-nav .social a.vimeo {
-  background: url('sencha_base/social.png') no-repeat;
+  background: image-url('sencha_base/social.png') no-repeat;
 }
-
 #footer-nav .social a.facebook {
-background-position: 0 -68px;
+  background-position: 0 -68px;
 }
 #footer-nav .social a.linkedin {
-background-position: 0 -91px;
+  background-position: 0 -91px;
 }
 #footer-nav .social a.twitter {
-background-position: 0 -137px;
+  background-position: 0 -137px;
 }
 #footer-nav .social a.tumblr {
-background-position: 0 -114px;
+  background-position: 0 -114px;
 }
 #footer-nav .social a.vimeo {
-background-position: 0 -160px;
+  background-position: 0 -160px;
 }
 
 #footer-nav .social a {
-color: #333;
-padding-left: 18px;
+  color: #333;
+  padding-left: 18px;
 }
 
 
