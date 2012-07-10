@@ -678,6 +678,11 @@ a.button-link {
 .hero-content-wrap {
   padding-top: 93px;
   text-align: center;
+  
+  // add more bottom space on Sencha ID.
+  &.for-id {
+    padding-bottom: 31px;
+  }
 }
 .hero-heading {
   font-family: "klavika-web-1","klavika-web-2",sans-serif;
@@ -687,10 +692,24 @@ a.button-link {
 .hero-p {
   color: #314d64;
   margin: 1px auto 0 auto;
-  width: 420px;
+
+  &.for-devs {
+    width: 420px;
+  }
+
 }
 .hero-form {
   margin-top: 38px;
+}
+.hero-text-field {
+  border: 1px solid #CCC;
+  @include border-radius(3px);
+  color: #555;
+  display: inline-block;
+  font-size: 14px;
+  height: 26px;
+  padding: 4px;
+  width: 210px;
 }
 
 // Let the footer begin
@@ -980,27 +999,26 @@ a.more-icon{
 #footer-nav .social a.vimeo {
   background: image-url('sencha_base/social.png') no-repeat;
 }
+
 #footer-nav .social a.facebook {
-  background-position: 0 -68px;
+background-position: 0 -798px;
 }
 #footer-nav .social a.linkedin {
-  background-position: 0 -91px;
+background-position: 0 -752px;
 }
 #footer-nav .social a.twitter {
-  background-position: 0 -137px;
+background-position: 0 -706px;
 }
 #footer-nav .social a.tumblr {
-  background-position: 0 -114px;
+background-position: 0 -775px;
 }
 #footer-nav .social a.vimeo {
-  background-position: 0 -160px;
+background-position: 0 -729px;
 }
-
 #footer-nav .social a {
-  color: #333;
+  color: #666;
   padding-left: 18px;
 }
-
 
 // for the nav to the right of the logo.
 #nav {
