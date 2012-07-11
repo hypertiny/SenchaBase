@@ -1062,6 +1062,10 @@ background-position: 0 -729px;
 .banner-action {
   position: relative;
   top: 5px;
+  
+  &:active {
+    top: 6px !important;
+  }
 }
 
 // applies to span - 'Show your Skills. Reach more prospects'.
