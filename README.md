@@ -2,16 +2,16 @@
 
 ## To set up your app to use shared resources
 
-Add Gem with Github ref to gem file: 
-gem 'sencha_base', :git => 'git://github.com/hypertiny/SenchaBase.git', :ref => 'xxxxxx'
+Add Gem with Github ref to gem file:  
+gem 'sencha_base', :git => 'git://github.com/hypertiny/SenchaBase.git', :ref => 'xxxxxx'  
 Add import for sass partials to the main stylesheet file.
 
-E.g. Add
-@import 'sencha_base/variables';
-@import 'sencha_base/helpers';
+E.g. Add  
+@import 'sencha_base/variables';  
+@import 'sencha_base/helpers';  
 to sdd.scss.
 
-Then, include the Sencha Base CSS manifest file in the app CSS manifest file.
+Then, include the Sencha Base CSS manifest file in the app CSS manifest file.  
 E.g.  *= require sencha_base/application, placed above, *= require_self in application.css
 
 A Rails Engine for resources common to multiple Sencha apps.
