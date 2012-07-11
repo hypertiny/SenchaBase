@@ -2196,3 +2196,75 @@ width: 100%;
     }
   }
 }
+
+h1 {
+  // alternative h2 - used most places other than home page and search results, 
+  // e.g. on the login screen. Makes big green headings.
+  &.balt {
+    border-bottom: 1px solid $grey-1;
+    color: $green;
+    font-family:"klavika-web-1", "klavika-web-2", sans-serif;
+    font-size: 39px;
+    letter-spacing: -1px;
+    line-height: 39px;
+    margin-bottom: 12px;
+    padding-bottom: 2px;
+  }
+}
+
+.top-block {
+  border-bottom: 1px solid $grey-1;
+  position: relative;
+
+  // position the h1 inside the block
+  h1 {
+    float: left;
+  }
+  
+  // applies to headings - remove bottom border to apply to .top-block instead.
+  .balt {
+    border-bottom: none;
+    margin-bottom: 3px;
+  }
+}
+
+form input[type="text"]:focus, form input[type="email"]:focus, form input[type="tel"]:focus, form input[type="url"]:focus, form input[type="password"]:focus, form textarea:focus, form.in-content input[type="text"]:focus, form.in-content input[type="email"]:focus, form.in-content input[type="tel"]:focus, form.in-content input[type="url"]:focus, form.in-content input[type="password"]:focus, form.in-content textarea:focus {
+  color: #314E64;
+  background-color: #FFD;
+}
+
+.formcontrols .blockrow label {
+  float: left;
+  font-size: 13px;
+  font-weight: bold;
+  width: 212px;
+  
+  // add a colon after a label.
+  &.colon:after {
+    content: ':';
+  }
+}
+
+.formcontrols .blockrow label, .formcontrols .blockrow .group.multifield label, .formcontrols .blockrow .groupoption label {
+  position: relative;
+  top: 4px;
+}
+
+.vbform {
+
+  // hint for form field.
+  .hint {
+    color: #777;
+    font-size: 11px;
+    max-width: 496px;
+    margin-left: 212px;
+    overflow: hidden;
+    line-height: 150%;
+    margin-bottom: 5px;
+  }
+}
+
+// label 'Services' for list of checkboxes for services.
+.formcontrols .blockrow .services-list-label {
+  float: none;
+}
