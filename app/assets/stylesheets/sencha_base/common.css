@@ -307,14 +307,8 @@ div.flash, .errorExplanation, .error, .notice {
   padding: 0.5em 1em;
   margin: 2em 0 1em;
 }
-div.error, .errorExplanation {
-	background-color: #FEE;
-}
 div.flash ul, .errorExplanation ul, .error ul, .notice ul {
   margin-left: 0;
-}
-.errorExplanation * {
-	color: #A00;
 }
 .errorExplanation h2 {
   text-align: left;
@@ -331,8 +325,8 @@ div.flash ul, .errorExplanation ul, .error ul, .notice ul {
 }
 .errorExplanation li, form .errorExplanation li {
   display: list-item;
-	list-style: outside square;
-	margin-left: 2em;
+  list-style: decimal;
+  margin-left: 20px;
 }
 .fieldWithErrors {
   display: inline;
