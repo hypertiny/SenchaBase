@@ -1856,6 +1856,26 @@ display: block;
 height: 1%;
 }
 
+.top-block {
+  border-bottom: 1px solid $grey-1;
+
+  // When there are no breadcrumbs add margin to the top of .top-block to keep 
+  // things even.
+  margin-top: 18px;
+  position: relative;
+
+  // position the h1 inside the block
+  h1 {
+    float: left;
+  }
+  
+  // applies to headings - remove bottom border to apply to .top-block instead.
+  .balt {
+    border-bottom: none;
+    margin-bottom: 3px;
+  }
+}
+
 // Breadcrumbs.
 nav.bc {
   color: #AAA;
@@ -1870,6 +1890,10 @@ nav.bc {
   
   a:hover, a:focus, a:active {
     text-decoration: underline;
+  }
+  
+  & + .top-block {
+    margin-top: 0;
   }
 }
 nav.bc a {
@@ -2213,22 +2237,6 @@ h1 {
     line-height: 39px;
     margin-bottom: 12px;
     padding-bottom: 2px;
-  }
-}
-
-.top-block {
-  border-bottom: 1px solid $grey-1;
-  position: relative;
-
-  // position the h1 inside the block
-  h1 {
-    float: left;
-  }
-  
-  // applies to headings - remove bottom border to apply to .top-block instead.
-  .balt {
-    border-bottom: none;
-    margin-bottom: 3px;
   }
 }
 
