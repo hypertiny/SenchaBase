@@ -1742,6 +1742,11 @@ h3.normalise {
   background: #fff none no-repeat;
   padding-left: 0px;
   padding-right: 0px;
+  
+  // when a second block body appears, like the Cancellation section
+  &.alt {
+    margin-top: 20px;
+  }
 }
 .blocksubhead {
   color: #4B4C57;
@@ -2290,28 +2295,28 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
   border-radius: 4px;
   padding: 18px 18px 12px;
   margin: 14px;
-}
-
-.errorExplanation h2, #error_explanation h2 {
-  color: lighten(#8A1D17, 10%);
-  font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.errorExplanation p, #error_explanation p {
-  font-size: 14px;
-  text-align: left;
-  padding: .5em 0;
-}
-
-.errorExplanation ul, #error_explanation ul {
-  font-size: 1.3em;
-  text-align: left;
-  list-style: decimal inside;
-  line-height: 1.4;
-  margin: 0;
-  font-size: 14px;
+  
+  h2 {
+    color: lighten(#8A1D17, 10%);
+    font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 14px;
+    text-align: left;
+    padding: .5em 0;
+  }
+  
+  ul {
+    font-size: 1.3em;
+    text-align: left;
+    list-style: decimal inside;
+    line-height: 1.4;
+    margin: 0;
+    font-size: 14px;
+  }
 }
 
 .errorExplanation li, form .errorExplanation li,
