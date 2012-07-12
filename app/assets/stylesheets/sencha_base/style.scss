@@ -2274,8 +2274,7 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 }
 
 /* Form errors */
-
-.errorExplanation {
+.errorExplanation, #error_explanation {
   border: 1px solid #D7D7D7;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -2285,24 +2284,31 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
   margin: 14px;
 }
 
-.errorExplanation h2 {
+.errorExplanation h2, #error_explanation h2 {
   color: lighten(#8A1D17, 10%);
   font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
   font-size: 14px;
   font-weight: bold;
 }
 
-.errorExplanation p {
+.errorExplanation p, #error_explanation p {
   font-size: 14px;
   text-align: left;
   padding: .5em 0;
 }
 
-.errorExplanation ul {
+.errorExplanation ul, #error_explanation ul {
   font-size: 1.3em;
   text-align: left;
   list-style: decimal inside;
   line-height: 1.4;
-  margin-left: 0;
+  margin: 0;
   font-size: 14px;
+}
+
+.errorExplanation li, form .errorExplanation li,
+#error_explanation li, form #error_explanation li {
+  display: list-item;
+  list-style: decimal;
+  margin-left: 20px;
 }

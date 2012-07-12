@@ -303,31 +303,6 @@ table.layout tr:hover {
   margin: inherit auto;
 }
 /* System Messages */
-div.flash, .errorExplanation, .error, .notice {
-  padding: 0.5em 1em;
-  margin: 2em 0 1em;
-}
-div.flash ul, .errorExplanation ul, .error ul, .notice ul {
-  margin-left: 0;
-}
-.errorExplanation h2 {
-  text-align: left;
-	font-size: 1.4em;
-	font-weight: bold;
-}
-.errorExplanation p {
-	padding-bottom: 0.5em;
-	margin-left: 0;
-}
-.errorExplanation ul, form .errorExplanation ul {
-	margin-bottom: 0;
-	margin-left: 0;
-}
-.errorExplanation li, form .errorExplanation li {
-  display: list-item;
-  list-style: decimal;
-  margin-left: 20px;
-}
 .fieldWithErrors {
   display: inline;
 }
