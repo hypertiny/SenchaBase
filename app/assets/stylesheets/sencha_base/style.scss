@@ -634,6 +634,12 @@ a.button-link {
       background-position: 0 -339px;
       background-color: #D4D4D4;
     }
+    
+    // make button faded and inactive looking
+    &.jaded {
+      border-color: #ddd;
+      color: #ccc;
+    }
   }
   
   // blue button for tertiary actions
@@ -667,6 +673,7 @@ a.button-link {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
+  
 }
 
 // IE7 Fix for display:inline-block
