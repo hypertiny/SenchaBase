@@ -1071,17 +1071,6 @@ background-position: 0 -729px;
   }
 }
 
-// Main big green button that sits to the right in the navy banner.
-// Position the button, styled by .green-link
-.banner-action {
-  position: relative;
-  top: 5px;
-  
-  &:active {
-    top: 6px !important;
-  }
-}
-
 // applies to span - 'Show your Skills. Reach more prospects'.
 .action-motivation {
   color: #cde5f8;
