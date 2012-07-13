@@ -2184,8 +2184,9 @@ width: 100%;
 .flash_notice {
   display: table;
   margin: 0 auto;
-  text-align: center;
+  pointer-events: none;
   position: absolute;
+  text-align: center;
   top: 55px;
   width: 100%;
   z-index: 10000;
