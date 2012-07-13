@@ -565,7 +565,13 @@ input[type="submit"] {
 // Links which look like big green buttons
 a.button-link {
   font-weight: bold;
-  padding: 6px 8px 9px;
+  padding: 6px 8px 9px !important;
+  
+  // make the button smaller - there are two sizes, standard and smaller
+  &.smaller {
+    font-size: 12px;
+    line-height: 8px;
+  }
 }
 
 // Here's the big green button
@@ -597,7 +603,9 @@ a.button-link {
   
   // Display button inline
   &.inline {
-    display: inline;
+    
+    // IE7 fix below
+    display: inline-block;
     cursor: pointer;
   }
   
@@ -661,6 +669,11 @@ a.button-link {
   }
 }
 
+// IE7 Fix for display:inline-block
+.lt-ie8 .inline {
+  zoom: 1;
+  display: inline !important;
+}
 
 // End of Buttons //
 
@@ -963,6 +976,7 @@ a.more-icon{
   width: 210px;
   
   p {
+    font-size: 12px;
     margin-bottom: 0;
   }
 }
