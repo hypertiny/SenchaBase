@@ -121,3 +121,10 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+@mixin rotate($deg) {
+  -moz-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  transform: rotate($deg);
+}
