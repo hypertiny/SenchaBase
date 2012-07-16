@@ -1905,6 +1905,16 @@ height: 1%;
   }
 }
 
+// Center the heading and <p> on the Confirm your email address page
+.confirm-email-p, .top-block .confirm-email-heading {
+  float: none;
+  text-align: center;
+}
+
+.confirm-email-p {
+  margin-bottom: 130px;
+}
+
 // Breadcrumbs.
 nav.bc {
   color: #AAA;
