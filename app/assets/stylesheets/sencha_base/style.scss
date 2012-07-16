@@ -450,6 +450,7 @@ form textarea {
 #docs-dropdown {
   left: 0;
   width: 140px;
+  z-index: 1000;
 }
 
 // Dev sign in / List your services
@@ -1157,7 +1158,7 @@ background-position: 0 -729px;
   position: relative;
   text-align: left;
   width: 100%;
-  z-index: 1000;
+  z-index: 998;
 }
 
 .loading-indicator {
@@ -2359,4 +2360,10 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
   display: list-item;
   list-style: decimal;
   margin-left: 20px;
+}
+
+
+// space out the support icon and text.
+.for-support-icon {
+  margin-right: 4px;
 }
