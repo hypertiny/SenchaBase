@@ -704,6 +704,11 @@ a.button-link {
   &.for-id {
     padding-bottom: 31px;
   }
+  
+  // add more bottom space on Sencha Market.
+  &.for-market {
+    padding-bottom: 10px;
+  }
 }
 .hero-heading {
   font-family: "klavika-web-1","klavika-web-2",sans-serif;
