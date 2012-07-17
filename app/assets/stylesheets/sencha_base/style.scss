@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'helpers';
+@import 'animations';
 
 /* tear it down */
 
@@ -47,7 +48,6 @@ blockquote, q {
 html {
   height: 100%;
   margin-bottom: 1px;
-  overflow-y: scroll;
 }
 
 /* stitch it together */
@@ -941,7 +941,8 @@ a.button-link {
 
 .hint, .error {
   display: block;
-  left: 480px;
+  left: 574px;
+  margin-top: -23px;
   position: absolute;
   width: 356px;
 }
@@ -949,13 +950,11 @@ a.button-link {
 // hint for form field.
 .hint {
   color: #777;
-  margin-top: -23px;
 }
 
 // Make the error red.
 .error {
   color: darken(#E28E90, 25%);
-  margin-top: -30px;
 }
 
 .error span, label span {
@@ -2220,6 +2219,11 @@ width: 100%;
   }
 }
 
+// use modernizr to target only browsers supporting css3 animations. Fade out flash notices after 3 seconds
+.cssanimations #flash {
+  @include animation(delayed-fade-out, 0.3s, 3s, 1, linear, forwards);
+}
+
 // applies to <div> - table allows centering without declaring width.
 .flash_notice {
   display: table;
@@ -2230,7 +2234,6 @@ width: 100%;
   top: 55px;
   width: 100%;
   z-index: 10000;
-  
   
   // flash for Sencha Devs has 1px difference. (couldn't determine why)
   &.for-devs {
