@@ -23,9 +23,21 @@
           <li>
             <strong><a class="main" href="http://market.sencha.com">Sencha Market</a></strong>
             <ul class="zero">
-              <li class="first"><%= link_to 'Plugins', '#', :rel => "nofollow" %></li>
-              <li><%= link_to 'Templates', '#', :rel => "nofollow" %></li>
-              <li><%= link_to 'Themes', '#', :rel => "nofollow" %></li>
+              <li class="first">
+                <%= link_to 'Plugins',
+                      'http://market.sencha.com/addons?types[]=plugins',
+                      :rel => "nofollow" %>
+              </li>
+              <li>
+                <%= link_to 'Templates',
+                      'http://market.sencha.com/addons?types[]=templates',
+                      :rel => "nofollow" %>
+              </li>
+              <li>
+                <%= link_to 'Themes',
+                      'http://market.sencha.com/addons?types[]=themes',
+                      :rel => "nofollow" %>
+              </li>
             </ul>
           </li>
         </ul>
