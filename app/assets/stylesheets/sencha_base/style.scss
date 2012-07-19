@@ -575,6 +575,16 @@ a.button-link {
   }
 }
 
+
+// When buttons, not links, are .smaller, set the height to keep things the same 
+// in Firefox and Safari.
+form button.button-links,
+input[type="submit"].button-link {
+  &.smaller {
+    height: 25px;
+  }
+}
+
 // Here's the big green button
 form button.button-links,
 input[type="submit"].button-link,
@@ -619,7 +629,6 @@ a.button-link {
   // make the button smaller - there are two sizes, standard and smaller
   &.smaller {
     font-size: 12px;
-    height: 25px;
     line-height: 8px;
   }
   
@@ -918,25 +927,6 @@ a.button-link {
   height: 24px;
   position: relative;
   left: 4px;
-}
-
-// Firefox - decided to use this workaround instead of investing more time in 
-// solving this issue.
-@-moz-document url-prefix() {
-  .search-location {
-    height: 32px;
-    position: relative;
-    top: 3px;
-  }
-}
-
-// Opera - another horrible hack - but best compromise at this time.
-@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
-  .search-location {
-    height: 32px;
-    position: relative;
-    top: 3px;
-  }
 }
 
 // Set height of search text field to match Devs
