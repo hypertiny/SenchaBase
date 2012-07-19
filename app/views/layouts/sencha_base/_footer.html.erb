@@ -5,40 +5,59 @@
         
         <ul class="column">
           <li>
-            <strong><a class="main" href="#">Sencha Products</a></strong>
+            <a class="main" href="/products/">Products</a>
             <ul class="zero">
-              <li class="first"><%= link_to 'Touch Charts', 'http://www.sencha.com/products/touch/charts/', :rel => "nofollow" %></li>
-              <li><%= link_to 'Ext JS 4', 'http://www.sencha.com/products/extjs/', :rel => "nofollow" %></li>
-              <li><%= link_to 'Ext GWT', 'http://www.sencha.com/products/extgwt/', :rel => "nofollow" %></li>
-              <li><%= link_to 'Ext Designer', 'http://www.sencha.com/products/designer/', :rel => "nofollow" %></li>
-              <li><%= link_to 'Ext Core', 'http://www.sencha.com/products/extcore/', :rel => "nofollow" %></li>
-              <li><%= link_to 'Sencha Touch', 'http://www.sencha.com/products/touch/', :rel => "nofollow" %></li>
-              <li><%= link_to 'Sencha Animator', 'http://www.sencha.com/products/animator/', :rel => "nofollow" %></li>
-              <li><%= link_to 'Sencha.io', 'http://sencha.com/products/io', :rel => "nofollow" %></li>
+              <li class="first"><a href="http://www.sencha.com/products/extjs/">Ext JS 4.1</a></li>
+              <li><a href="http://www.sencha.com/products/gxt/">Sencha GXT 3</a></li>
+              <li><a href="http://www.sencha.com/products/touch/">Sencha Touch 2</a></li>
+              <li><a href="http://www.sencha.com/products/touch-charts/">Sencha Touch Charts</a></li>
+              <li><a href="http://www.sencha.com/products/architect/">Sencha Architect 2</a></li>
+              <li><a href="http://www.sencha.com/products/animator/">Sencha Animator</a></li>
+              <li class="last"><a href="http://www.sencha.com/products/io/">Sencha.io</a></li>
             </ul>
           </li>
         </ul>
         
         <ul class="column">
           <li>
-            <strong><a class="main" href="http://market.sencha.com">Sencha Market</a></strong>
+            <a class="main" href="/support/">Support</a>
             <ul class="zero">
-              <li class="first"><%= link_to 'Plugins', '#', :rel => "nofollow" %></li>
-              <li><%= link_to 'Templates', '#', :rel => "nofollow" %></li>
-              <li><%= link_to 'Themes', '#', :rel => "nofollow" %></li>
+              <li class="first"><a href="http://www.sencha.com/support/services/">Sencha Services</a></li>
+              <li class="last"><a href="http://www.sencha.com/support/faq/">FAQ</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="main" href="/training/">Training</a>
+            <ul class="zero">
+              <li class="first last"><a href="http://www.sencha.com/training/courses/">Courses</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+        <ul class="column">
+          <li>
+            <a class="main" href="/company/">Company</a>
+            <ul class="zero">
+              <li class="first"><a href="http://www.sencha.com/company/team/">Team</a></li>
+              <li><a href="http://www.sencha.com/company/careers/">Careers</a></li>
+              <li><a href="http://www.sencha.com/company/events/">Events</a></li>
+              <li><a href="http://www.sencha.com/company/press/">Press</a></li>
+              <li><a href="http://www.sencha.com/company/customers/">Customers</a></li>
+              <li><a href="http://www.sencha.com/company/partners/">Partners</a></li>
+              <li class="last"><a href="http://www.sencha.com/company/contact/">Contact</a></li>
             </ul>
           </li>
         </ul>
 
         <ul class="column">
-          <li>
-            <strong><a class="main" href="http://www.senchadevs.com">Sencha Devs</a></strong>
-            <ul class="zero">
-              <li class="first"><%= link_to 'Full listing', 'http://www.senchadevs.com/developers' %></li>
-              <li><%= link_to 'Geographic listing', 'http://www.senchadevs.com/developers/by_location' %></li>
-              <li class="last"><%= link_to 'Terms of use', 'http://www.senchadevs.com/pages/terms', :rel => "nofollow" %></li>
-            </ul>
-          </li>
+          <li><a class="main" href="/blog/">Blog</a></li>
+          <li><a class="main" href="/forum/">Forum</a></li>
+          <li><a class="main" href="/learn/">Learn</a></li>
+          <li><a class="main" href="http://docs.sencha.com/">API Docs</a></li>
+          <li><a class="main" href="/apps/">App Gallery</a></li>
+          <li><a class="main" href="http://pages.sencha.com/resources">Resource Library</a></li>
+          <li><a class="main" href="/store/">Store</a></li>
+          <li><a class="legal" href="/legal/">Legal</a></li>
         </ul>
         
         <ul class="column social last">
@@ -50,8 +69,51 @@
         </ul>
 
       </div> <%# columns %>
+      
+          <form action="#footer" method="post" id="marketoEmailForm-footer" name="marketoEmailForm-footer" class="marketoEmailForm email-signup-form">
+          <label for="marketoEmail-footer">
+              <span>Sign up for exclusive Sencha news!</span>
+              <input id="marketoEmail-footer" name="marketoEmail-footer" type="email" placeholder="Email" size="25" class="email-field" />
+              <input name="LeadSource" id="LeadSource" type='hidden' value="Website" />
+              <input name="Secondary_Source__c" id="Secondary_Source__c" type='hidden' value="#" />
+              <button id="email-signup-submit-footer" name="email-signup-submit-footer" class="button-link inline secondary smaller for-newsletter-sign-up">Sign up</button>
+          </label>
+          <p class="thanks">Thanks for signing up!</p>
+
+              <div class="like-tweet">
+
+                <!-- Place this tag where you want the +1 button to render. -->
+                <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+
+                <!-- Place this tag after the last +1 button tag. -->
+                <script type="text/javascript">
+                  (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                  })();
+                </script><br>
+
+
+              <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="Sencha">Tweet</a><br>
+
+
+              <div class="fb-like" data-send="false" data-href="http://www.sencha.com/" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+          </div>
+
+      <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+      <div id="fb-root"></div>
+      <script>(function(){
+      var e=document.createElement('script');e.async=true;
+      e.src=document.location.protocol+'//connect.facebook.net/en_US/all.js#xfbml=1';
+      document.getElementById('fb-root').appendChild(e);}());</script>
+
+      </form>
+      
     </nav> <%# footer-nav %>
     <hr />
+    
+    <p class="find-developers-footer-link"><a href="http://www.senchadevs.com" title="Find Sencha developers near you." class="more-icon">Find Sencha developers at SenchaDevs</a></p>
     
     <div id="copyright">
       <a href="#"><i class="icon-comments-alt for-support-icon"></i>Support</a>

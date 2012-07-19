@@ -675,6 +675,10 @@ a.button-link {
     padding-bottom: 0 !important;
   }
   
+  &.for-newsletter-sign-up {
+    font-weight: bold;
+    width: 64px;
+  }
 }
 
 // IE7 Fix for display:inline-block
@@ -747,7 +751,7 @@ a.button-link {
   font-size: 12px;
   line-height: 1.0em;
   min-width: 870px;
-  padding: 20px 0;
+  padding: 20px 0 40px 0;
   text-align: left;
 }
 
@@ -781,8 +785,9 @@ a.button-link {
   
   // make the headings of groups of footer links bold and blue
   a, a.main, strong, strong a {
-    color: $blue;
+    color: #333;
     display: block;
+    font-weight: normal;
     line-height: 18px;
     margin-bottom: 0;
     padding-right: 5px;
@@ -834,14 +839,14 @@ a.button-link {
     clear: both;
     color: #E0E0E0;
     height: 1px;
-    margin-bottom: 24px;
+    margin: 0 0 24px 0;
     outline: none;
   }
   
   .email-signup-form {
-    margin-left: 662px;
+    float: right;
     margin-bottom: 20px;
-    position: relative;
+    width: 208px;
     
     button {
       position: relative;
@@ -869,7 +874,7 @@ a.button-link {
   }
   
   .like-tweet {
-    padding-top: 24px;
+    padding-top: 19px;
   }
 }
 
@@ -2374,4 +2379,10 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 // space out the support icon and text.
 .for-support-icon {
   margin-right: 4px;
+}
+
+// Link in footer 'Find developers at Sencha Devs'.
+.find-developers-footer-link {
+  float:left;
+  width:50%;
 }
