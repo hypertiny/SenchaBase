@@ -578,10 +578,12 @@ a.button-link {
 
 // When buttons, not links, are .smaller, set the height to keep things the same 
 // in Firefox and Safari.
-form button.button-links,
+button.button-link,
 input[type="submit"].button-link {
   &.smaller {
     height: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
