@@ -666,6 +666,11 @@ a.button-link {
     &:hover, &:focus, &:active {
       background: darken(#E28E90, 12.5%);
     }
+    
+    &.for-delete {
+      float: right;
+      margin-top: 20px;
+    }
   }
   
   // position Search button on Devs home page.
