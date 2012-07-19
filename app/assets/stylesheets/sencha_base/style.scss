@@ -619,6 +619,7 @@ a.button-link {
   // make the button smaller - there are two sizes, standard and smaller
   &.smaller {
     font-size: 12px;
+    height: 25px;
     line-height: 8px;
   }
   
@@ -851,7 +852,7 @@ a.button-link {
   .email-signup-form {
     float: right;
     margin-bottom: 20px;
-    width: 208px;
+    width: 209px;
     
     button {
       position: relative;
@@ -887,7 +888,7 @@ a.button-link {
   border-color: #C2C2C2;
   font-size: 12px;
   float: left;
-  height: 14px;
+  height: 15px;
   padding-bottom: 3px;
   width: 130px;
   margin: 0;
