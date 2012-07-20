@@ -1284,18 +1284,6 @@ a[data-behaviour='toggle-filter-tab'] {
       color: darken(#4B4C57,10%) !important;
       cursor: pointer;
     }
-    .toggle-filter {
-      position: absolute;
-      right: 1px;
-      
-      &:after {
-        content: '-';
-      }
-      
-      &.is-closed:after {
-        content: '+';
-      }
-    }
   }
 }
 
@@ -1459,11 +1447,6 @@ h3, span {
     margin-bottom: 0;
     padding-bottom: 8px
   }
-  
-  // add the word 'and', cosmetica only.
-  &.generate-and:after {
-    content: 'and';
-  }
 }
 
 // add bottom padding to the 'Showing developers...' search results heading.
@@ -1607,27 +1590,6 @@ h3.normalise {
       }
     }
   }
-
-  // close 'x' for showing fewer filter options in search results.
-  &.show-fewer-filter-options {
-    color: #4B4C57;
-    font-size: 16px;
-    position: absolute;
-    right: -6px;
-    top: -7px;
-    z-index: 1000;
-
-    // on hover darken.
-    &:hover, &:focus, &:active {
-      color: darken(#4B4C57,10%) !important;
-      cursor: pointer;
-    }
-
-    // add the 'x' icon semantically.
-    &:after {
-      content: '×';
-    }
-  }
 }
 
 // position the 'Edit Search' button-style link.
@@ -1665,6 +1627,11 @@ h3.normalise {
   margin-bottom: 4px;
   margin-top: 1em;
   text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 1px;
+}
+
+// Stop title from wrapping in IE7.
+.lt-ie8 .search-results-list h2 {
+  width: 840px;
 }
 
 // applies to the <ul> holding the list of developers and their info.
@@ -1711,7 +1678,13 @@ h3.normalise {
   // Prevent line breaks between icon and label
   li {
     white-space: nowrap;
+    display: inline;
   }
+}
+
+// For IE7, list of attributes stacks vertically without this.
+.lt-ie8 .developer-attributes-list {
+  width: 840px;
 }
 
 
@@ -1741,6 +1714,16 @@ h3.normalise {
     
     &:last-child:after {
       content: '';
+    }
+  }
+}
+
+// Generate CSS content for IE7; add a comma between services - last comma not 
+// removed, as in supporting browsers, which is fine with me.
+.lt-ie8 {
+  .developer-services-list {
+    li span {
+      *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#44;&nbsp;');
     }
   }
 }
