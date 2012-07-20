@@ -1969,6 +1969,7 @@ nav.bc {
     margin-top: 0;
   }
 }
+
 nav.bc a {
   color: #AAA;
 }
@@ -1984,6 +1985,10 @@ nav.bc span {
 // IE7
 .lt-ie8 nav.bc {
   line-height: 20px;
+}
+// IE7 doesn't support CSS generated content, so use the font-awesome workaround
+.lt-ie8 nav.bc span {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#47;&nbsp;');
 }
 
 // end crumbs
