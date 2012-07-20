@@ -1112,6 +1112,13 @@ background-position: 0 -729px;
   }
 }
 
+// Pull up the action motivation text in IE7, to baseline align with the button 
+// text.
+.lt-ie8 .action-motivation {
+  position: relative;
+  top: -9px;
+}
+
 // Select drop down for selecting location.
 .select-location {
   display: inline-block;
