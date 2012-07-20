@@ -938,23 +938,6 @@ a.button-link {
   }
 }
 
-.field_with_errors, .field_with_hint {
-  position: relative;
-}
-
-.hint, .error {
-  display: block;
-  left: 574px;
-  margin-top: -23px;
-  position: absolute;
-  width: 356px;
-}
-
-// hint for form field.
-.hint {
-  color: #777;
-}
-
 // Make the error red.
 .error {
   color: darken(#E28E90, 25%);
@@ -2029,6 +2012,8 @@ width: 100%;
   @include box-sizing;;
 }
 .blockrow, .input {
+  position: relative;
+  
   a, a:link, a:visited {
     color: #126499;
     font-size: 14px;
@@ -2047,12 +2032,6 @@ width: 100%;
   .explanation  {
     font-size: 13px;
     margin-bottom: 18px;
-  }
-  
-  // alternative form input hint, for servies-list.
-  .alt-hint {
-    margin-left: 212px;
-    width: 320px;
   }
   
   // Character count, 'X remaining'.
@@ -2338,19 +2317,65 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
   top: 4px;
 }
 
+// Make lowercase text
+.lowercase {
+  text-transform: lowercase;
+}
+
+// When text appears in a form, where an input usually is, pad-out to keep 
+// height and alignment in check
+.fake-input {
+  display: block;
+  margin: 5px 0 6px 0;
+}
+
+
+// Form hints
+.field_with_errors, .field_with_hint {
+  position: relative;
+}
+
+.hint, .error {
+  display: block;
+  left: 574px;
+  margin-top: -23px;
+  position: absolute;
+  width: 356px;
+}
+
+// hint for form field.
+.hint {
+  color: #777;
+}
+
 .vbform {
 
   // hint for form field.
   .hint {
-    color: #777;
     font-size: 11px;
     max-width: 496px;
     margin-left: 212px;
     overflow: hidden;
+    left: 287px;
     line-height: 150%;
     margin-bottom: 5px;
+    
+    // position the hint for email address in Devs.
+    &.for-email-addresses {
+      top: 40px;
+    }
+  }
+  
+  // alternative form input hint, for servies-list.
+  .alt-hint {
+    margin-left: 212px;
+    width: 320px;
   }
 }
+
+// End hints
+
+
 
 // label 'Services' for list of checkboxes for services.
 .formcontrols .blockrow .services-list-label {
