@@ -2236,6 +2236,16 @@ width: 100%;
   }
 }
 
+// Generate CSS content for IE7; add a comma between services - last comma not 
+// removed, as in supporting browsers, which is fine with me.
+.lt-ie8 {
+  .developer-request-list {
+    li span {
+      *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#44;&nbsp;');
+    }
+  }
+}
+
 // use modernizr to target only browsers supporting css3 animations. Fade out flash notices after 3 seconds
 .cssanimations #flash {
   @include animation(delayed-fade-out, 0.3s, 3s, 1, linear, forwards);
