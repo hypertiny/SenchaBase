@@ -2166,6 +2166,11 @@ width: 100%;
   }
 }
 
+// For IE7, add some bottom space to the list of activation requirements.
+.lt-ie8 .validation-message {
+  margin-bottom: 15px;
+}
+
 .struck-off {
   color: lighten(#7EB83C,40%) !important;
   text-decoration: line-through;
@@ -2261,7 +2266,7 @@ width: 100%;
     @include border-radius(2px);
     @include box-shadow(0px, 1px, 7px, rgba(0, 0, 0, 0.3));
     color: #fff;
-    @include display-inline-block;;
+    @include display-inline-block;
     font-weight: bold;
     margin-top: 0;
     padding: 6px 12px;
@@ -2273,7 +2278,7 @@ width: 100%;
       text-shadow: darken(#bc2f00, 10%) 0px 1px 0px;
     }
     &.notice {
-      background-color: #000;
+      background-color: #76AC38;
       border: 1px solid darken(#81B93B, 5%);
       border-bottom: none;
       text-shadow: darken(#81B93B, 10%) 0px 1px 0px;
@@ -2345,7 +2350,7 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 
 .hint, .error {
   display: block;
-  left: 574px;
+  left: 497px;
   margin-top: -23px;
   position: absolute;
   width: 356px;
