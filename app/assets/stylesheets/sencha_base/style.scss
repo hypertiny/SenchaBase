@@ -415,7 +415,7 @@ form textarea {
       
       a {
         color: #CEE7F7;
-        display: inline-block;
+        @include display-inline-block;
         font-weight: bold;
         padding: 4px 2px;
         text-decoration: none;
@@ -477,7 +477,7 @@ form textarea {
     
     a {
       color: #CEE7F7;
-      display: inline-block;
+      @include display-inline-block;
       font-weight: bold;
       padding: 4px 2px;
       text-decoration: none;
@@ -618,7 +618,7 @@ a.button-link {
   &.inline {
     
     // IE7 fix below
-    display: inline-block;
+    @include display-inline-block;
     cursor: pointer;
   }
   
@@ -752,7 +752,7 @@ a.button-link {
   border: 1px solid #CCC;
   @include border-radius(3px);
   color: #555;
-  display: inline-block;
+  @include display-inline-block;
   font-size: 14px;
   height: 26px;
   padding: 4px;
@@ -1067,7 +1067,7 @@ background-position: 0 -729px;
     
     a.main {
       color: #F8FCFF;
-      display: inline-block;
+      @include display-inline-block;
       font-size: 15px;
       font-weight: bold;
       line-height: 1.0em;
@@ -1104,7 +1104,7 @@ background-position: 0 -729px;
 
 // Select drop down for selecting location.
 .select-location {
-  display: inline-block;
+  @include display-inline-block;
   height: 33px;
   width: 210px;
   padding: 4px;
@@ -1198,7 +1198,7 @@ background-position: 0 -729px;
   box-shadow: inset 0px -1px 3px #ccc;
   
   a, a:link, a:visited {
-    display: inline-block;
+    @include display-inline-block;
     padding: 7px 14px;
   }
 }
@@ -1274,7 +1274,7 @@ a[data-behaviour='toggle-filter-tab'] {
 .filter-options-tab-list {
   margin-left: 4px;
   li {
-    display: inline-block;
+    @include display-inline-block;
     width: 73px; // gives 14px spacing
     
     a, a:link, a:visited {
@@ -1350,7 +1350,7 @@ a[data-behaviour='toggle-filter-tab'] {
     -o-box-shadow: white;
     box-shadow: white;
     color: #999;
-    display: inline-block;
+    @include display-inline-block;
     float: right;
     font-size: 11px;
     font-weight: bold;
@@ -1520,7 +1520,7 @@ h3.normalise {
 // applies to <a> with the 'x' for removing a filter.
 .remove-filter {
   color: lighten(#314E64,40%) !important;
-  display: inline-block;
+  @include display-inline-block;
   font-size: 10px;
   line-height: 22px;
   padding: 0 10px 0 4px;
@@ -1674,7 +1674,7 @@ h3.normalise {
 // line these up horizontally
 .search-results-list-budget, .search-results-list-size, .search-results-list-location, .provider-level-item, .search-results-list-endorsements {
   color: #314E64;
-  display: inline-block;
+  @include display-inline-block;
 }
 
 .search-results-list-location, .search-results-list-budget, .search-results-list-size {
