@@ -2031,7 +2031,9 @@ width: 100%;
 
 // for IE7, add spacing to the bottom of form sections.
 .lt-ie8 .input {
-  margin-bottom: 30px;
+  &.check_boxes, &.radio_buttons {
+    margin-bottom: 30px;
+  }
 }
 
 .vbform {
