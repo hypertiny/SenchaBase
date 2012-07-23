@@ -1718,7 +1718,7 @@ h3.normalise {
 
 // position the provider level badge on the search results page, inline with the other icons.
 .search-results-provider-level {
-  display: inline-block;
+  @include display-inline-block;
   left: 12px;
   position: relative;
   top: -3px;
@@ -2261,10 +2261,11 @@ width: 100%;
     @include border-radius(2px);
     @include box-shadow(0px, 1px, 7px, rgba(0, 0, 0, 0.3));
     color: #fff;
-    display: inline-block;
+    @include display-inline-block;;
     font-weight: bold;
     margin-top: 0;
     padding: 6px 12px;
+    
     &.alert, &.error, &.warning {
       background-color: #bc2f00;
       border: 1px solid darken(#bc2f00, 5%);
@@ -2272,12 +2273,19 @@ width: 100%;
       text-shadow: darken(#bc2f00, 10%) 0px 1px 0px;
     }
     &.notice {
-      background-color: #76AC38;
+      background-color: #000;
       border: 1px solid darken(#81B93B, 5%);
       border-bottom: none;
       text-shadow: darken(#81B93B, 10%) 0px 1px 0px;
     }
   }
+}
+
+// There's an issue with IE7 where the flash notice pushes content down the 
+// page despite the position: absolute property. This positions the notice in 
+// that space as a visual compromise.
+.lt-ie8 .flash_notice {
+  top: 149px;
 }
 
 h1 {

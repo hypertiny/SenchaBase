@@ -128,3 +128,9 @@
   -webkit-transform: rotate($deg);
   transform: rotate($deg);
 }
+@mixin display-inline-block {
+  display: inline-block;
+  // IE7 fix for display: inline-block
+  zoom: 1;
+  *display: inline;
+}
