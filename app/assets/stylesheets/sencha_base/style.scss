@@ -2011,6 +2011,7 @@ width: 100%;
 .formcontrols input, select, textarea {
   @include box-sizing;;
 }
+
 .blockrow, .input {
   position: relative;
   
@@ -2026,6 +2027,11 @@ width: 100%;
   a:hover, a:focus, a:active {
     text-decoration: underline;
   }
+}
+
+// for IE7, add spacing to the bottom of form sections.
+.lt-ie8 .input {
+  margin-bottom: 30px;
 }
 
 .vbform {
