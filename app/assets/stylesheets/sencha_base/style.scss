@@ -2441,6 +2441,12 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
   }
 }
 
+
+// For IE7, move form hints down a bit, the float above the fields without.
+.lt-ie8 .vbform .hint {
+  top: 50px;
+}
+
 // End hints
 
 
