@@ -2139,6 +2139,53 @@ width: 100%;
   p span {
     color: lighten(#7EB83C, 45%);
   }
+  
+  // the bit of text introducing the list. Add some top space.
+  .direction {
+    margin: 7px 0;
+  }
+  
+  // right align the 'Complete profile' link.
+  .act {
+    margin-bottom: 0;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    
+    &.b {
+      bottom: 7px;
+    }
+    
+    // if the button is to 'Submit for Approval', position is nicely.
+    &.approve {
+      bottom: 6px;
+    }
+  }
+  
+  h3.alt {
+    border-bottom: 1px solid lighten(#7EB83C,25%);
+    padding-bottom: 12px;
+    margin-bottom: 0;
+  }
+  
+  a, a:link, a:visited {
+    color: #fff;
+  }
+  
+  &.rejected {
+    background-color: #bc2f00;
+    border: none;
+    @include box-shadow(0px, 1px, 3px, darken(#bc2f00, 10%));
+    text-shadow: darken(#bc2f00, 10%) 0px 1px 0px;
+    
+    h3.alt {
+      border-bottom: 1px solid #fff;
+    }
+    
+    .button-link {
+      @extend .delete;
+    }
+  }
 }
 
 // applied to Activate notice text to limit the paragraph measure.
@@ -2453,4 +2500,9 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 .find-developers-footer-link {
   float:left;
   width:50%;
+}
+
+// For IE7, don't show the check icon, because it makes things up.
+.complete.icon-ok-sign {
+  *zoom: 1;
 }
