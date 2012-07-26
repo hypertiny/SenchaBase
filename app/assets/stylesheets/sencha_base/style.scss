@@ -1845,7 +1845,7 @@ h3.normalise {
 
   // make select inputs the same width as input textfields.
   select {
-    width: 248px;
+    width: 310px;
   }
   
   // remove border and size text for file inputs.
@@ -1963,7 +1963,7 @@ nav.bc span {
   background: #F2F6F8 none;
 }
 .formcontrols .blockrow .primary {
-  width: 248px;
+  width: 310px;
 
   // raise text box a little to keep alignment with label consistent with market.sencha.dev.
   &.textbox {
@@ -1974,6 +1974,7 @@ nav.bc span {
   // And when it's a textarea set height to 3x height of an textfield.
   &.text-area {
     height: 92px;
+    width: 310px;
   }
 }
 .formcontrols .blockrow.singlecheck label {
@@ -2405,7 +2406,7 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 
 .hint, .error {
   display: block;
-  left: 497px;
+  left: 552px;
   margin-top: -23px;
   position: absolute;
   width: 356px;
@@ -2424,7 +2425,7 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
     max-width: 496px;
     margin-left: 212px;
     overflow: hidden;
-    left: 287px;
+    left: 342px;
     line-height: 150%;
     margin-bottom: 5px;
     
