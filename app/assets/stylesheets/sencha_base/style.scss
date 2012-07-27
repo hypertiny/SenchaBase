@@ -2429,6 +2429,10 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
     line-height: 150%;
     margin-bottom: 5px;
     
+    a, a:link, a:visited {
+      font-size: 11px;
+    }
+    
     // position the hint for email address in Devs.
     &.for-email-addresses {
       top: 40px;
