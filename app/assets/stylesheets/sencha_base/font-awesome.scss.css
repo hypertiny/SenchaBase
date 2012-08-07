@@ -23,8 +23,8 @@
     */
 @font-face {
   font-family: "FontAwesome";
-  src: asset-url('sencha_base/fontawesome-webfont.eot');
-  src: asset-url('sencha_base/fontawesome-webfont.eot?#iefix') format('eot'), asset-url('sencha_base/fontawesome-webfont.woff') format('woff'), asset-url('sencha_base/fontawesome-webfont.ttf') format('truetype'), asset-url('sencha_base/fontawesome-webfont.svg#FontAwesome') format('svg');
+  src: url('sencha_base/fontawesome-webfont.eot');
+  src: url('sencha_base/fontawesome-webfont.eot?#iefix') format('eot'), url('sencha_base/fontawesome-webfont.woff') format('woff'), url('sencha_base/fontawesome-webfont.ttf') format('truetype'), url('sencha_base/fontawesome-webfont.svg#FontAwesome') format('svg');
   font-weight: normal;
   font-style: normal;
 }
