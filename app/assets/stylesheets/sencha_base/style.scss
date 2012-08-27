@@ -1462,14 +1462,6 @@ h3.normalise {
   }
 }
 
-// Firefox - decided to use this workaround instead of investing more time in 
-// solving this issue.
-@-moz-document url-prefix() {
-  .filter-statement-term-wrap {
-    padding-right: 7px;
-  }
-}
-
 // IE7 - set height and horizontally align filter tags.
 .lt-ie9 .filter-statement-term-wrap {
   height: 32px;
@@ -2421,7 +2413,7 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
   // hint for form field.
   .hint {
     font-size: 11px;
-    max-width: 496px;
+    max-width: 290px;
     margin-left: 212px;
     overflow: hidden;
     left: 342px;
