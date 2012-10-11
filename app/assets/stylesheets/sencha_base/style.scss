@@ -207,17 +207,12 @@ hr {
 }
 
 // Styles copied in from Sencha Market (pre-Hypertiny)
-form {
-  font-size: 12px;
-  line-height: 1.4em;
-}
 
 form input, 
 form textarea {
   background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAMAAABIdo1RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF8vLy2dnZzgvGVQAAABBJREFUeNpiYAQCBhAACDAAACgABekA5OQAAAAASUVORK5CYII=') repeat-x 0 0;
   border: 1px solid #CCC;
   font-family: "Helvetica Neue",Arial,"Lucida Grande",sans-serif;
-  font-size: 14px;
   padding: 5px 3px 4px;
   @include border-radius(3px);
 }
