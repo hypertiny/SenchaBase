@@ -3,7 +3,10 @@
 // Modified by @paddy
 
 .alert {
-  @include display-inline-block;
+  display: inline-block;
+  // IE7 fix for display: inline-block
+  zoom: 1;
+  *display: inline;
   padding: 8px 14px;
   margin-bottom: 19px;
   color: #c09853;
