@@ -20,7 +20,7 @@ E.g. @import 'sencha_base/variables';
 
 Starting to get these consistent.
 
-The following styles should be applied to element wrapping the error message, ideally, just a <ul> or <p>. A <div> is fine, but no need for nested elements.
+The following styles should be applied to element wrapping the error message, ideally, just a ``<ul>`` or ``<p>``. A ``<div>`` is fine, but no need for nested elements.
   
     <ul class="alert alert-error"><li>You must enter an email address</li></ul>
     <p> class="alert alert-info">Please choose a username</p>
