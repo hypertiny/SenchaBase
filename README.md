@@ -28,16 +28,16 @@ Classes are based on [Twitter Bootstraps alerts] (http://twitter.github.com/boot
 
 ## Flash notices
 
-The following styles should be applied to the element wrapping the flash notice, ideally a ``<div>``. The ``<div>`` allows with content of undeclared width to be centred. A ``<p>`` is usually nested, contains the notice content and the styles are applied to this element.
+The following styles should be applied to the element wrapping the flash notice, ideally a ``<div>``. The ``<div>`` allows content of undeclared width to be centred. A ``<p>`` is usually nested containing the notice content and the styles are applied to this element.
   
     <div class="flash_notice">
-      <p class="notice">You must enter an email address</p>
+      <p class="notice">Success! I'm green.</p>
     </div>
     <div class="flash_notice">
-      <p class="alert error or warning">You must enter an email address</p>
+      <p class="alert error or warning">There was a problem! I'm red</p>
     </div>
     
-Note, .alert, .error and .warning do the same thing.
+Note, .alert, .error and .warning are the same and will be cleared up; .error is the class name to be adopted consistently.
 
 ## Workflow when working from remote repo
 
