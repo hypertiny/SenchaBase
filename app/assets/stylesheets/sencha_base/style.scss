@@ -1400,6 +1400,13 @@ a[data-behaviour='toggle-filter-tab'] {
     line-height: 28px;
     margin-bottom: 0;
   }
+  
+  // For Developer#show, the developer name.
+  // Allow right padding so longer dev names don't overlap the developer badge
+  // only applied when the dev has a badge
+  h1.has-badge {
+    padding-right: 132px;
+  }
 }
 
 
@@ -1712,7 +1719,8 @@ h3.normalise {
   
   // nudge the provider level icon back up a little but on developer#show.
   &.show {
-    top: -1px;
+    right: 15px;
+    top: 15px;
   }
 }
 
