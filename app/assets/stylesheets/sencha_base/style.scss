@@ -1724,13 +1724,13 @@ h3.normalise {
   width: 17px;
   
   // Gold
-  &.gold {
-    background: image-url('sencha_base/sencha-gold.png') no-repeat;
+  &.premier {
+    background: image-url('sencha_base/badges/premier.png') no-repeat;
   }
   
   // Silver
-  &.silver {
-    background: image-url('sencha_base/sencha-silver.png') no-repeat;
+  &.select {
+    background: image-url('sencha_base/badges/select.png') no-repeat;
   }
 }
 
