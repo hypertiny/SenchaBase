@@ -1725,12 +1725,12 @@ h3.normalise {
   
   // Gold
   &.gold {
-    background: url('sencha_base/sencha-gold.png') no-repeat;
+    background: image-url('sencha_base/sencha-gold.png') no-repeat;
   }
   
   // Silver
   &.silver {
-    background: url('sencha_base/sencha-silver.png') no-repeat;
+    background: image-url('sencha_base/sencha-silver.png') no-repeat;
   }
 }
 
