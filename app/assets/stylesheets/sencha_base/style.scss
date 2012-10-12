@@ -1706,10 +1706,9 @@ h3.normalise {
 
 // position the provider level badge on the search results page, inline with the other icons.
 .search-results-provider-level {
-  @include display-inline-block;
-  position: relative;
-  right: 0;
-  top: 0;
+  position: absolute;
+  right: 11px;
+  top: 11px;
   
   // nudge the provider level icon back up a little but on developer#show.
   &.show {
