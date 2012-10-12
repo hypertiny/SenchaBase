@@ -20,6 +20,13 @@ E.g. @import 'sencha_base/variables';
 
 Form alerts appear within, or just above a form. Not in the header like a flash notice. [See example] (http://skit.ch/nipg)
 
+### Example copy
+
+* Email can't be blank
+* Current password can't be blank
+
+Note, full stops are not used..
+
 The following styles should be applied to elements wrapping the error message, ideally, just a ``<ul>`` or ``<p>``. A ``<div>`` is fine, but no need for nested elements.
   
     <ul class="alert alert-error"><li>You must enter an email address</li></ul>
@@ -31,6 +38,13 @@ Classes are based on [Twitter Bootstraps alerts] (http://twitter.github.com/boot
 ## Flash notices
 
 Flash notices appear in the header and fade out (css animation) after 3 seconds. [See example] (http://skit.ch/nip8)
+
+### Example copy
+
+* Logged out successfully.
+* Logged in successfully.
+
+Note, full stops are used.
 
 The following styles should be applied to the element wrapping the flash notice, ideally a ``<div>``. The ``<div>`` allows content of undeclared width to be centred. A ``<p>`` is usually nested containing the notice content and the styles are applied to this element.
   
