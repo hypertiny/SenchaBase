@@ -16,17 +16,28 @@ E.g. *= require sencha_base/application
 
 E.g. @import 'sencha_base/variables';
 
-### Form error messages and alerts.
+## Form alerts
 
-Starting to get these consistent.
-
-The following styles should be applied to element wrapping the error message, ideally, just a ``<ul>`` or ``<p>``. A ``<div>`` is fine, but no need for nested elements.
+The following styles should be applied to elements wrapping the error message, ideally, just a ``<ul>`` or ``<p>``. A ``<div>`` is fine, but no need for nested elements.
   
     <ul class="alert alert-error"><li>You must enter an email address</li></ul>
     <p> class="alert alert-info">Please choose a username</p>
     <div class="alert alert-success">Success!</div>
     
 Classes are based on [Twitter Bootstraps alerts] (http://twitter.github.com/bootstrap/components.html#alerts).
+
+## Flash notices
+
+The following styles should be applied to the element wrapping the flash notice, ideally a ``<div>``. The ``<div>`` allows with content of undeclared width to be centred. A ``<p>`` is usually nested, contains the notice content and the styles are applied to this element.
+  
+    <div class="flash_notice">
+      <p class="notice">You must enter an email address</p>
+    </div>
+    <div class="flash_notice">
+      <p class="alert error or warning">You must enter an email address</p>
+    </div>
+    
+Note, .alert, .error and .warning do the same thing.
 
 ## Workflow when working from remote repo
 

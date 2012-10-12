@@ -2280,6 +2280,7 @@ width: 100%;
 }
 
 // applies to <div> - table allows centering without declaring width.
+// Wraps the actualy notice, like a <p class="notice">message</p>
 .flash_notice {
   display: table;
   margin: 0 auto;
