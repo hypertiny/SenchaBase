@@ -562,7 +562,9 @@ input[type="submit"] {
 // Links which look like big green buttons
 a.button-link {
   font-weight: bold;
-  padding: 6px 8px 9px !important;
+  padding: 8px !important;
+  // Previous, perhaps still in consistent and need to revert
+  // padding: 6px 8px 9px !important;
   
   // make the button smaller - there are two sizes, standard and smaller
   &.smaller {

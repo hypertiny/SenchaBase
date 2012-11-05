@@ -6,8 +6,19 @@
   animation: $animation-name $duration $delay $iterations $timing-function $direction;
 }
 
-// fade out the flash notices after 3 seconds.
 @-webkit-keyframes delayed-fade-out {
+  0%    { opacity: 1; }
+  100%  { opacity: 0; }
+}
+@-moz-keyframes delayed-fade-out {
+  0%    { opacity: 1; }
+  100%  { opacity: 0; }
+}
+@-ms-keyframes delayed-fade-out {
+  0%    { opacity: 1; }
+  100%  { opacity: 0; }
+}
+@keyframes delayed-fade-out {
   0%    { opacity: 1; }
   100%  { opacity: 0; }
 }
