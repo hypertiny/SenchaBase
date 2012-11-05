@@ -2,8 +2,6 @@
 // http://twitter.github.com/bootstrap/components.html#alerts
 // Modified by @paddy
 
-// What the hell! Why won't this update?
-
      // #errorExplanation is temporary - it's from Devs and needs replacing.
 .alert, #errorExplanation {
   display: inline-block;
@@ -26,12 +24,13 @@
 }
 
 .blockbody {
-  .alert {
+  .alert, #errorExplanation {
     margin: 19px;
   }
 }
 
 .alert ul li, .alert ol li, .alert, , #errorExplanation ul {
+  height: auto; // because the height is getting at form[action="/session"] ul.
   list-style: none;
 }
 
