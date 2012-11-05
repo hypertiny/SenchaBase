@@ -2301,7 +2301,7 @@ width: 100%;
 
 // use modernizr to target only browsers supporting css3 animations. Fade out flash notices after 3 seconds
 .cssanimations {
-  #flash, .flash_notice, #flash_notice {
+  #flash, .flash_notice {
     @include animation(delayed-fade-out, 0.3s, 3s, 1, linear, forwards);
   }
 }
