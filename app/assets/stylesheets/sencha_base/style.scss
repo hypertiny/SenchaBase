@@ -1618,6 +1618,7 @@ h3.normalise {
   
   > li {
     background: #fff;
+    border: 1px solid #fff;
     @include border-radius(5px);
     margin-bottom: 14px;
     padding: 1px 12px;
@@ -1625,6 +1626,13 @@ h3.normalise {
     -webkit-transition: all .25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
+    
+    // Visually differentiate partners
+    // Make subtle blue, add border - to be shown at the top of search results.
+    &.partner {
+      background: #EFF2F4;
+      border: 1px solid #DAE5ED;
+    }
     
     // When the li is hovered over, several child elements change.
     &:hover, &:focus, &:active {
