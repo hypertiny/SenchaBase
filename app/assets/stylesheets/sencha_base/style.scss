@@ -2113,7 +2113,7 @@ width: 100%;
 }
 .cop-out {
   position: relative;
-  top: 10px;
+  top: 6px;
   left: 10px;
   
   a, a:link, a:visited {
@@ -2300,7 +2300,7 @@ width: 100%;
 // use modernizr to target only browsers supporting css3 animations. Fade out flash notices after 3 seconds
 .cssanimations {
   #flash, .flash_notice {
-    //@include animation(delayed-fade-out, 0.3s, 3s, 1, linear, forwards);
+    @include animation(delayed-fade-out, 0.3s, 3s, 1, linear, forwards);
   }
 }
 
@@ -2315,11 +2315,6 @@ width: 100%;
   top: 55px;
   width: 100%;
   z-index: 10000;
-  
-  // flash for Sencha Devs has 1px difference. (couldn't determine why)
-  &.for-devs {
-    top: 77px;
-  }
   
   // for IE6 a notice is shown to encourage the user to install a new browser or 
   // install chromeframe for IE6. This positions that notice.
