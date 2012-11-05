@@ -2300,14 +2300,13 @@ width: 100%;
 // use modernizr to target only browsers supporting css3 animations. Fade out flash notices after 3 seconds
 .cssanimations {
   #flash, .flash_notice {
-    @include animation(delayed-fade-out, 0.3s, 3s, 1, linear, forwards);
+    //@include animation(delayed-fade-out, 0.3s, 3s, 1, linear, forwards);
   }
 }
 
 // applies to <div> - table allows centering without declaring width.
 // Wraps the actualy notice, like a <p class="notice">message</p>
 .flash_notice {
-  @include animation(delayed-fade-out, 0.3s, 3s, 1, linear, forwards);
   display: table;
   margin: 0 auto;
   pointer-events: none; // allow click through on fade out.
