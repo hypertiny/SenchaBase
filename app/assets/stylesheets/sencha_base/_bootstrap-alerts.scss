@@ -2,7 +2,8 @@
 // http://twitter.github.com/bootstrap/components.html#alerts
 // Modified by @paddy
 
-.alert {
+     // #errorExplanation is temporary - it's from Devs and needs replacing.
+.alert, #errorExplanation {
   display: inline-block;
   // IE7 fix for display: inline-block
   zoom: 1;
@@ -28,7 +29,7 @@
   }
 }
 
-.alert ul li, .alert ol li, .alert {
+.alert ul li, .alert ol li, .alert, , #errorExplanation ul {
   list-style: none;
 }
 
@@ -43,7 +44,8 @@
 }
 
 .alert-danger,
-.alert-error {
+.alert-error,
+#errorExplanation {
   color: #b94a48;
   background-color: #f2dede;
   border-color: #eed3d7;
