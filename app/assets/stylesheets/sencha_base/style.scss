@@ -2316,6 +2316,15 @@ width: 100%;
   width: 100%;
   z-index: 10000;
   
+  // For the forum notice on Sencha Market, make sure the link is clickable.
+  &.forum_notice {
+    pointer-events: auto;
+    a, a:link, a:visited {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+  
   // for IE6 a notice is shown to encourage the user to install a new browser or 
   // install chromeframe for IE6. This positions that notice.
   &.chromeframe {
