@@ -1971,8 +1971,13 @@ nav.bc span {
 // end crumbs
 
 .formcontrols .blockrow input.textbox:focus, .formcontrols .blockrow textarea:focus, .formcontrols .input input:focus {
+  background: #F2F6F8 none;
+}
+
+input.button-link:focus {
   background: #4C8E0E  none;
 }
+
 .formcontrols .blockrow .primary {
   width: 310px;
 
