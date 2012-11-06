@@ -2469,6 +2469,12 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
   }
 }
 
+// For the hint for the price field on Sencha Market on the 'Basic' extension
+// settings.
+#extension_price + .hint {
+  top: 40px; // Not ideal because set to centre two lines of text.
+}
+
 
 // For IE7, move form hints down a bit, the float above the fields without.
 .lt-ie8 .vbform .hint {
