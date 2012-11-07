@@ -92,7 +92,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h2 {
-  font-size: 1.8em;
   font-weight: 300;
   text-align: left;
   color: #66ab16;
@@ -2509,4 +2508,23 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 // make placeholder fallback default grey
 .placeholder {
   color: #aaa;
+}
+
+// 404
+.p404 {
+  background-color: #F8F8F8; // Make bg colour the same grey, don't show darker footer
+  
+  // “The page you’re trying to reach could not be found”
+  h2 {
+    font-size: 2em;
+    margin-bottom: 0.75em;
+    margin-top: 0.5em;
+  }
+  
+  // Make the link noticeble
+  p {
+    a, a:link, a:visited {
+      border-bottom: 1px solid #ccc;
+    }
+  }
 }
