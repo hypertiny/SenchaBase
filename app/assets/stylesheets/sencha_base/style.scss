@@ -1916,13 +1916,25 @@ height: 1%;
 }
 
 // Center the heading and <p> on the Confirm your email address page
-.confirm-email-p, .top-block .confirm-email-heading {
+.confirm-email-p,
+.confirm-download-p, 
+.top-block .confirm-email-heading,
+.top-block .download-heading {
   float: none;
   text-align: center;
 }
 
 .confirm-email-p {
-  margin-bottom: 100px;
+  margin-bottom: pem(100px);
+}
+
+.confirm-download-p.download {
+  
+  // <a> download button after purchasing an extension
+  // Move down the same distance as the email icon on the ID sign up page.
+  .download {
+    @include scale(margin-top, 28px, 15px);
+  }
 }
 
 // Breadcrumbs.
