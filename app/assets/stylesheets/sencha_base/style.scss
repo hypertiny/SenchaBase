@@ -57,7 +57,7 @@ body {
   background: #EDEDED image-url('sencha_base/_bg-top-grey.png') repeat-x top center;
   border: 0;
   color: $text;
-  font: $base-font-size/20px "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  font: #{$base-font-size}/20px "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
