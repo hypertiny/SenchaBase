@@ -2,7 +2,7 @@
   <div id="footer-content">
     <nav id="footer-nav" class="clearfix">
       <div class="columns">
-        
+
         <ul class="column">
           <li>
             <a class="main" href="/products/">Products</a>
@@ -17,7 +17,7 @@
             </ul>
           </li>
         </ul>
-        
+
         <ul class="column">
           <li>
             <a class="main" href="/support/">Support</a>
@@ -33,7 +33,7 @@
             </ul>
           </li>
         </ul>
-        
+
         <ul class="column">
           <li>
             <a class="main" href="http://www.sencha.com/company/">Company</a>
@@ -59,7 +59,7 @@
           <li><a class="main" href="http://www.sencha.com/store/">Store</a></li>
           <li><a class="legal" href="/legal/">Legal</a></li>
         </ul>
-        
+
         <ul class="column social last">
           <li><a class="facebook" href="http://www.facebook.com/senchainc">Facebook</a></li>
           <li><a class="linkedin" href="http://j.mp/sencha-in">LinkedIn</a></li>
@@ -69,7 +69,7 @@
         </ul>
 
       </div> <%# columns %>
-      
+
           <form action="http://www.sencha.com#footer" method="post" id="marketoEmailForm-footer" name="marketoEmailForm-footer" class="marketoEmailForm email-signup-form">
           <label for="marketoEmail-footer">
               <span>Sign up for exclusive Sencha news!</span>
@@ -109,14 +109,16 @@
       document.getElementById('fb-root').appendChild(e);}());</script>
 
       </form>
-      
+
     </nav> <%# footer-nav %>
     <hr />
-    
+
     <p class="find-developers-footer-link"><a href="http://www.senchadevs.com" title="Find Sencha developers near you." class="more-icon">Find Sencha developers at SenchaDevs</a></p>
-    
+
     <div id="copyright">
-      <a id="support-link" href="#"><i class="icon-bullhorn for-support-icon"></i>Support / Flag Content</a>
+      <%- if try(:logged_in?) || try(:user_signed_in?) -%>
+        <a id="support-link" href="#"><i class="icon-bullhorn for-support-icon"></i>Support / Flag Content</a>
+      <%- end -%>
       <p>&copy; 2012 Sencha Inc. All rights reserved.</p>
     </div>
   </div> <%# #footer-content %>
