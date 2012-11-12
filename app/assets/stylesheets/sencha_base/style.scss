@@ -788,7 +788,7 @@ a.button-link {
     
     // when two lists appear after each other in a single column, add space.
     // Make sure this isn't applied to sub menu <li>s
-    > li + li {
+    .stack {
       @include scale(margin-top, 18px, 12px);
     }
   }
