@@ -785,6 +785,11 @@ a.button-link {
     margin: 0 0 24px 0;
     text-align: left;
     width: 127px;
+    
+    // when two lists appear after each other in a single column, add space.
+    li + li {
+      @include scale(margin-bottom, 18px, 12px);
+    }
   }
   
   // moves the social list to the right, imitating two empty columns.
