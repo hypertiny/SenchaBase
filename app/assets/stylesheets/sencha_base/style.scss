@@ -669,7 +669,7 @@ a.button-link {
     background: darken(#E28E90, 5%);
     border: 1px solid darken(#E28E90, 10%);
     color: #fff;
-    text-shadow: darken(#E28E90, 20%) 0px 1px 0px;
+    text-shadow: darken(#E28E90, 20%) 0px -1px 0px;
 
     &:hover, &:focus, &:active {
       background: darken(#E28E90, 12.5%);
@@ -957,7 +957,7 @@ a.more-icon {
 a.more-icon{
   background-repeat: no-repeat;
   background-position: right center;
-  color: #126499;
+  color: $blue;
   font-size: 12px;
   font-weight: bold;
   padding-right: 16px;
@@ -2120,14 +2120,14 @@ width: 100%;
 }
 
 .formcontrols input, select, textarea {
-  @include box-sizing;;
+  @include box-sizing;
 }
 
-.blockrow, .input {
+.blockrow, .input, .input-wrap-likeness {
   position: relative;
   
   a, a:link, a:visited {
-    color: #126499;
+    color: $blue;
     font-size: 14px;
     
     // On Submit a Request - reduce link size to same as p.explanation.
