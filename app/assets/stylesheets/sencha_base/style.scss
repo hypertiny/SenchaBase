@@ -1888,6 +1888,78 @@ h3.normalise {
     border-top: none;
   }
 }
+
+// The .input-wrap-likeness stuff exists somewhere in Market (maybe only admin now), and in Sencha Devs on the “Accept/Reject” endorsement view.
+// The idea is to present info the same way as a form, in the white, roundy corner box, so different markup is needed, here are the styles:
+
+// wraps content like the formcontrols input wrapper.
+.input-wrap-likeness {
+  margin-bottom: 4px;
+  
+  // indent left, like the typical for inputs.
+  p, ul, a.show-more {
+    margin: 0 0 0 212px;
+  }
+  
+  ul li {
+    float: left;
+    list-style-type: disc;
+    width: 206px;
+    
+    // take the bottom border off the last item.
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 2px;
+    }
+    
+    // for the list of screenshots on the preview page. Don't set width and 
+    // allow them to look like they do on the Screenshots page.
+    &.extension-list-item {
+      list-style: none;
+      width: auto;
+      
+      // take the left margin off the paragraph.
+      p {
+        margin-left: 0;
+      }
+    }
+  }
+  
+  // underline links.
+  a, a:link, a:visited {
+    border-bottom: 1px solid $text;
+  }
+}
+
+// .label-likeness makes things look like labels, e.g. The Extension submission 
+// preview page, applies to h2.
+.formcontrols .input label, .label-likeness, .input-wrap-likeness h2.colt {
+  border-bottom: none;
+  color: $text;
+  float: left;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0;
+  width: 212px;
+  
+  // add a colon after a label.
+  &.colon:after {
+    content: ':';
+  }
+}
+
+// when screeshots are pull onto the preview page, adjust the title position.
+.input-wrap-likeness h2.colt {
+  margin-top: 2px;
+}
+
+// position the label-like h2.
+.label-likeness {
+  position: relative;
+  top: 1px;
+}
+
 .formcontrols .blocksubhead {
 font-weight: bold;
 }
