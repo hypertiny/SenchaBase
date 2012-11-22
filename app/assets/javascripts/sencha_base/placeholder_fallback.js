@@ -1,12 +1,9 @@
 // Placeholder fallback for browsers that don't support it.
 //
-// Requirements:
-// Modernizr
-//
 // Instructions:
-// 1. Require sencha_base/placeholder_fallback after Modernizr and before any
-// other on submit events are binded, so the placeholder attribute is reset and
-// not posted as the field value.
+// 1. Require sencha_base/placeholder_fallback before any other on submit events
+// are binded, so the placeholder attribute is reset and not posted as the field
+// value.
 //
 // 2. Add 'placeholder' class to elements with placeholders.
 //
@@ -15,9 +12,8 @@
 Ext.onReady(function() {
 
   // check placeholder browser support
-  if (!Modernizr.input.placeholder)
+  if(!('placeholder' in document.createElement("input")))
   {
-   
     // set placeholder values
     Ext.select("*[placeholder]").each(function() {
       field = Ext.get(this);
