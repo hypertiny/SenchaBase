@@ -643,12 +643,20 @@ a.button-link {
       background-position: 0 -339px;
       background-color: #D4D4D4;
     }
-    
+    /*
     // make button faded and inactive looking
-    &.jaded {
-      border-color: #ddd;
+    &.jaded, .jaded:hover {
+      //background: #0f0 !important;
+      background-position: 0 -374px;
+      border-color: #0f0;
       color: #ccc;
     }
+    
+    .jaded:hover {
+      background: #0f0 !important;
+      border-color: #00f;
+    }
+    */
   }
   
   // blue button for tertiary actions
