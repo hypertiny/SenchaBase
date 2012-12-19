@@ -646,17 +646,12 @@ a.button-link {
     
     // make button faded and inactive looking
     &.jaded, .jaded:hover {
-      //background: #0f0 !important;
+      background: #eee;
       background-position: 0 -374px;
-      border-color: #0f0;
+      border-color: #ddd;
       color: #ccc;
+      pointer-events: none;
     }
-    
-    .jaded:hover {
-      background: #0f0 !important;
-      border-color: #00f;
-    }
-    
   }
   
   // blue button for tertiary actions
@@ -709,6 +704,15 @@ a.button-link {
 }
 
 // End of Buttons //
+
+
+// On the “How to join the directory” page. Sencha Devs
+
+// <h2>, “Step 2”, space out.
+h2.jaded {
+  margin-bottom: 10px;
+  margin-top: 19px;
+}
 
 
 // Let the Hero Begin
