@@ -85,19 +85,21 @@ If an element has a font size other than the ``$base-font-size`` set, e.g. a hea
 
 See [http://mrdanadams.com/2012/pixel-ems-css-conversion-sass-mixin/] (http://mrdanadams.com/2012/pixel-ems-css-conversion-sass-mixin/)
 
-## Workflow when working from remote repo
+## Workflow when pushing to GitHub
 
-  1. Make change to a shared resource in Sencha Base
-  2. Commit change and push
-  3. Copy commit ref
-  4. Update commit ref in Gemfile of all apps
-  5. Bundle apps
-  6. Restart the server if using Pow: touch tmp/restart.txt
+  1. Commit changes and push.
+  2. Copy short commit ref, i.e. first 7 characters.
+  3. Update commit ref in Gemfile of all apps, e.g. ``gem 'sencha_base', :git => 'git://github.com/hypertiny/SenchaBase.git', :ref => 'xxxxxxxx'``
+  4. Bundle apps.
+  5. Restart the server. If using Pow: ``touch tmp/restart.txt``
 
 ## Workflow when working locally
 
-  1. Remove path from Gemfile.
-  2. Make change to a shared resource in Sencha Base
-  3. Run 'rake install' in terminal
+  1. Remove path from Gemfile, i.e. ``gem 'sencha_base', :git => 'git://github.com/hypertiny/SenchaBase.git', :ref => 'xxxxxxxx'`` goes to ``gem 'sencha_base'``
+  2. Make change to a shared resource in Sencha Base.
+  3. Run ``rake install`` in terminal, for Sencha Base
+  4. Restart the Sencha app you’re working on (e.g. ID, Devs, Market). If using Pow: ``touch tmp/restart.txt``
+
+Or, if ``rake install`` is failing, do ``rake build && gem install /Users/paddy/Apps/SenchaBase/pkg/sencha_base-0.0.1.gem && touch /Users/paddy/Apps/SenchaMarket/tmp/restart.txt``, making sure to update the file paths to your local destination.
   
-When finished working locally, be sure to commit Sencha Base changes, update apps with the GitHub commit ref, bundle apps and restart server.
+When finished working locally, be sure to commit Sencha Base changes, update apps with the GitHub commit ref.
