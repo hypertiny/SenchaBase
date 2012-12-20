@@ -85,10 +85,12 @@ a:hover {
 /* the headers. */
 
 h1,h2,h3,h4,h5,h6 {
-  color: #314e64;
   font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, Verdana, Geneva, sans-serif;
   line-height: 1.1em;
   text-rendering: optimizeLegibility;
+}
+h1,h2,h3,h4 {
+  color: #314e64;
 }
 
 h2 {
@@ -726,6 +728,19 @@ a.button-link {
   padding-bottom: 16px;
   text-rendering: optimizeLegibility;
   text-shadow: rgba(255, 255, 255, 0.8) 0 1px 1px;
+  
+  // used for “by Developer”, makes blue, on Extensions#show, on Market.
+  b {
+    color: $blue;
+    font-weight: normal;
+    
+    a, a:link, a:visited {
+      color: $blue;
+    }
+    a:hover, a:focus, a:active {
+      text-decoration: underline;
+    }
+  }
 }
 
 // holds paragraph on the steps page.
