@@ -707,11 +707,37 @@ a.button-link {
 
 
 // On the “How to join the directory” page. Sencha Devs
+// make text faded and inactive looking
+// Jaded button styles found above
+.jaded, h2.jaded {
+  color: #ccc;
+}
 
-// <h2>, “Step 2”, space out.
-h2.jaded {
-  margin-bottom: 10px;
-  margin-top: 19px;
+// Heading used for 'Screenshots' and similar.
+.colt {
+  border-bottom: 1px solid #DEDEDE;
+  color: #4B4C57;
+  font-family: "klavika-web-1","klavika-web-2",sans-serif;
+  font-size: 28px;
+  font-weight: 200;
+  line-height: 1em;
+  margin-bottom: 19px;
+  margin-top: 1em;
+  padding-bottom: 16px;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 1px;
+}
+
+// holds paragraph on the steps page.
+.top-content {
+  color: #434343;
+  font-size: 16px;
+  margin-top: 8px;
+  
+  // limit <p> width for good reading measure.
+  p {
+    width: 540px;
+  }
 }
 
 
