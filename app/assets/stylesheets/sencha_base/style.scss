@@ -1497,12 +1497,12 @@ h3.normalise {
   color: #96B4CB;
   font-size: 17px;
   position: absolute;
-  top: 2px;
+  top: 0;
   width: 0 !important;
 }
 
 .lt-ie8 .filter-statement-term-icon {
-  top: 4px;
+  top: 2px;
 }
 
 .icon-remove {
@@ -1736,16 +1736,16 @@ h3.normalise {
   width: 550px;
 }
 
-// position the provider level badge on the search results page, inline with the other icons.
+// <ul>. position the provider level badge on the search results page
 .search-results-provider-level {
-  position: absolute;
-  right: 11px;
-  top: 11px;
-  
-  // nudge the provider level icon back up a little but on developer#show.
-  &.show {
-    right: 15px;
-    top: 15px;
+  li {
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    
+    &:nth-child(2) {
+      top: 54px;
+    }
   }
 }
 
