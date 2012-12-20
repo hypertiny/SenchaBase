@@ -1777,7 +1777,6 @@ h3.normalise {
 
 // place the Gold or Silver developer level icon.
 .provider-level, span.provider-level {
-  background-size: 100% 100%;
   height: 45px;
   width: 120px;
   
@@ -1787,6 +1786,7 @@ h3.normalise {
     
     @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
       background: image-url('sencha_base/badges/premier@2x.png') no-repeat;
+      background-size: 120px 45px;
     }
   }
   
@@ -1796,6 +1796,7 @@ h3.normalise {
     
     @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
       background: image-url('sencha_base/badges/select@2x.png') no-repeat;
+      background-size: 120px 45px;
     }
   }
 }
