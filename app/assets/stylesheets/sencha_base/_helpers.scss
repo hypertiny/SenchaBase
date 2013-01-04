@@ -51,7 +51,6 @@
   }
 }
 
-
 .clearfix:after {
   clear: both;
   content: ' ';
@@ -156,6 +155,19 @@
   // IE7 fix for display: inline-block
   zoom: 1;
   *display: inline;
+}
+
+// A container with rounded corners, soft grey border and white bg.
+@mixin box-simon {
+  background: #fff;
+  border: 1px solid #DDD;
+  @include border-radius(5px);
+}
+
+// A bottom border, light grey, usually used with the main heading of a
+// box-simon section.
+@mixin border-simon {
+  border-bottom: 1px solid #F1F1F1;
 }
 
 /* See http://mrdanadams.com/2012/pixel-ems-css-conversion-sass-mixin/ */
