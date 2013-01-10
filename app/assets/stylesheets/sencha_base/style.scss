@@ -2536,9 +2536,11 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 }
 
 .formcontrols .blockrow label {
+  @include box-sizing(border-box);
   float: left;
   font-size: 13px;
   font-weight: bold;
+  padding-right: 10px;
   width: 212px;
   
   // add a colon after a label.
@@ -2630,7 +2632,8 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 
 // label 'Services' for list of checkboxes for services.
 .formcontrols .blockrow .services-list-label {
-  float: none;
+  position: absolute;
+  top: 24px;
 }
 
 // space out the support icon and text.
