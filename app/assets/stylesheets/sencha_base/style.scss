@@ -2536,7 +2536,7 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 }
 
 .formcontrols .blockrow label {
-  @include box-sizing(border-box);
+  @include box-sizing;
   float: left;
   font-size: 13px;
   font-weight: bold;
