@@ -1675,9 +1675,8 @@ h3.normalise {
   margin-left: 0; // 18px applied by default.
   
   > li {
-    background: #fff;
-    border: 1px solid #fff;
-    @include border-radius(5px);
+    @include box-soft;
+    @extend .clearfix;
     margin-bottom: 14px;
     padding: 1px 12px;
     position: relative;

@@ -158,15 +158,15 @@
 }
 
 // A container with rounded corners, soft grey border and white bg.
-@mixin box-simon {
+@mixin box-soft {
   background: #fff;
   border: 1px solid #DDD;
   @include border-radius(5px);
 }
 
 // A bottom border, light grey, usually used with the main heading of a
-// box-simon section.
-@mixin border-simon {
+// box-soft section.
+@mixin border-soft {
   border-bottom: 1px solid #F1F1F1;
 }
 
