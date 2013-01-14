@@ -1204,6 +1204,7 @@ background-position: 0 -729px;
 // wraps the search results; search field, results, list and filter options.
 #content-wrapper {
   background: #F8F8F8;
+  @extend .clearfix;
   min-height: 148px;
   padding: 15px 0 84px 0;
   position: relative;
@@ -1730,6 +1731,193 @@ h3.normalise {
   width: 840px;
 }
 
+// On developers#show, modify positioning of .developer-attributes-list
+.developer-attributes-list-show {
+  margin-top: 5px;
+}
+
+// Styles here shared between Market extensions#show
+// and Devs developers#show.
+
+// <section> which holds the following stuff in a round-corners header style box 
+.section-soft {
+  @include box-soft;
+  margin: 4px 0 20px 0;
+  overflow: hidden;
+  padding: 7px 12px 4px 12px;
+  position: relative;
+  @include transition(background, 300ms, 0);
+  
+  // <a> position the Download button on product or preview#show,
+  // absolutely top right
+  .section-soft-download-button {
+    display: inline;
+    float: right;
+    position: relative;
+    margin-top: -25px;
+    top: -10px;
+
+    &:active {
+      top: -9px !important;
+    }
+  }
+}
+
+// <header> wraps the heading on preview.
+// add a light grey underline.
+.section-soft-header {
+  @include border-soft;
+  margin-bottom: 1px;
+  padding-bottom: 6px;
+}
+
+// <h1> containing the title, author and status, e.g. draft, of a product or 
+// preview#show.
+.section-soft-heading {
+  color: $green;
+  font-family: "klavika-web-1","klavika-web-2",sans-serif;
+  font-size: 39px;
+  font-weight: 200;
+  letter-spacing: -1px;
+  width: 805px; // Set width to prevent overlap over edit button
+}
+
+// <a> position the Edit button on product or preview#show, absolutely top right
+.section-soft-edit-button {
+  position: absolute;
+  right: 11px;
+  top: 11px;
+  
+  &:active {
+    position: absolute !important;
+    top: 12px !important;
+  }
+}
+
+// wrap everything in section-soft up to the list holding the edit and download 
+// button, so a min height can be set to stop the download button collapsing up 
+// over the bottom border of the header.
+.section-soft-inner {
+  min-height: 95px;
+}
+
+// <ul> holds the caterogies for a product.
+.section-soft-category-list {
+  margin: 5px 0 0 0;
+  
+  li {
+    display: inline;
+    margin-right: 3px;
+    
+    // remove right margin from last item.
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// <a> for each category, looks like a little tag with rounded corners
+.section-soft-category-link {
+  background: #F4F7F9;
+  @include border-radius(3px);
+  border: 1px solid #DAE5ED;
+  color: #314E64;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 2px 3px;
+  position: relative;
+  @include transition(all, .1s, ease-in-out);
+  
+  /*
+  
+  // not required until category filtering has been implemented.
+  &:hover, &:active, &:focus {
+    background: darken(#F4F7F9,5%);
+    color: darken(#314E64,5%);
+  }
+  */
+}
+
+// <div> wrapping the product description
+.section-soft-description {
+  margin-top: 20px;
+  width: 550px;
+  
+  // Make Read more link blue
+  a, a:link, a:visited {
+    color: $blue;
+    white-space: nowrap;
+    
+    // Add underline on hover
+    &:hover, &:active, &:focus {
+      text-decoration: underline;
+    }
+  }
+  
+  // when either product or browser listings come after the description, on 
+  // Preview, add padding.
+  & + div {
+    margin-top: 20px;
+  }
+}
+
+// Headings for Browsers and Products, which are inline with list items.
+h3.inline-attributes-heading {
+  border: none;
+  color: $text;
+  @include display-inline-block;
+  font-size: 12px;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+// <ul> inline list of attributes, e.g. products and browsers.
+.inline-attributes-list {
+  color: #767676;
+  @include display-inline-block;
+  font-size: 12px;
+  margin-bottom: 0;
+  width: 650px;
+  
+  li {
+    display: inline;
+    
+    // add comma after each item
+    &:after {
+      content: ', ';
+    }
+    
+    // add 'and' before the last item.
+    &:nth-last-child(2):after {
+      content: ' and ';
+    }
+    
+    // don't add a comment for the last item
+    &:last-child:after {
+      content: '';
+    }
+    
+    a, a:link, a:visited {
+      color: #767676;
+      
+      &:hover, &:active, &:focus {
+        color: $blue;
+      }
+    }
+  }
+}
+
+// Wrap Products and Browsers lists in a left column.
+.lesser-box {
+  background: #ECECEC;
+  border: 1px solid darken(#fefefe,10%);
+  @include border-radius(5px);
+  font-size: 12px;
+  padding: 10px;
+}
+
 
 // line these up horizontally
 .search-results-list-budget, .search-results-list-size, .search-results-list-location, .provider-level-item, .search-results-list-endorsements {
@@ -1815,7 +2003,11 @@ h3.normalise {
   }
 }
 
-// vbform e.g. log in form
+// Make sure padding isn't added to file inputs,
+// so the 'choose file' and text stay aligned (in webkit).
+input[type="file"].primary.textbox {
+  padding: 0;
+}
 .standard_error {
   margin: 0 auto;
 }
