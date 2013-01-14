@@ -2005,7 +2005,9 @@ h3.inline-attributes-heading {
 
 // Make sure padding isn't added to file inputs,
 // so the 'choose file' and text stay aligned (in webkit).
-input[type="file"].primary.textbox {
+input[type="file"].primary.textbox, // for devs
+input[type="file"].file { // for market (both have different markup)
+  margin-bottom: 10px;
   padding: 0;
 }
 .standard_error {
@@ -2314,12 +2316,6 @@ nav.bc span {
 
 .formcontrols .blockrow .primary {
   width: 310px;
-
-  // raise text box a little to keep alignment with label consistent with market.sencha.dev.
-  &.textbox {
-    position: relative;
-    top: -3px;
-  }
   
   // And when it's a textarea set height to 3x height of an textfield.
   &.text-area {
