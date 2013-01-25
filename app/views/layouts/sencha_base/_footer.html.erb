@@ -81,35 +81,26 @@
           </label>
           <p class="thanks">Thanks for signing up!</p>
 
-              <div class="like-tweet">
+          <div class="like-tweet">
 
-                <!-- Place this tag where you want the +1 button to render. -->
-                <div class="g-plusone" data-size="medium" data-count="true" data-href="<%= root_url %>"></div>
+            <!-- Place this tag where you want the +1 button to render. -->
+            <div class="g-plusone" data-size="medium" data-count="true" data-href="<%= root_url %>"></div>
 
-                <!-- Place this tag after the last +1 button tag. -->
-                <script type="text/javascript">
-                  (function() {
-                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                    po.src = 'https://apis.google.com/js/plusone.js';
-                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                  })();
-                </script><br>
+            <!-- Place this tag after the last +1 button tag. -->
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script><br>
 
+            <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="Sencha">Tweet</a><br>
 
-              <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="Sencha">Tweet</a><br>
-
-
-              <div class="fb-like" data-send="false" data-href="http://www.sencha.com/" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.sencha.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
           </div>
 
       <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-      <div id="fb-root"></div>
-      <script>(function(){
-      var e=document.createElement('script');e.async=true;
-      e.src=document.location.protocol+'//connect.facebook.net/en_US/all.js#xfbml=1';
-      document.getElementById('fb-root').appendChild(e);}());</script>
-
-      </form>
 
     </nav> <%# footer-nav %>
     <hr />
