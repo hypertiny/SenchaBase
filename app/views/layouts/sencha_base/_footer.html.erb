@@ -1,5 +1,13 @@
 <footer id="footer" class="clearfix">
   <div id="footer-content">
+    <%- if Time.now < '2013-07-20'.to_time -%>
+      <div class="sencha-conference-banner">
+        <a href="http://www.senchacon.com/?utm_source=website&amp;utm_medium=<%= current_app %>&amp;utm_campaign=senchacon2013">
+          <img src="http://cdn.sencha.io/img/senchacon2013/banners/senchacon-banner.png" alt="Senchacon-banner">
+        </a>
+      </div>
+    <%- end -%>
+
     <nav id="footer-nav" class="clearfix">
       <div class="columns">
 

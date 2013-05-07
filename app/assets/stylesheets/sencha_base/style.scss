@@ -210,7 +210,7 @@ hr {
 
 // Styles copied in from Sencha Market (pre-Hypertiny)
 
-form input, 
+form input,
 form textarea {
   background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAMAAABIdo1RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF8vLy2dnZzgvGVQAAABBJREFUeNpiYAQCBhAACDAAACgABekA5OQAAAAASUVORK5CYII=') repeat-x 0 0;
   border: 1px solid #CCC;
@@ -262,14 +262,14 @@ form textarea {
   width: 233px;
   z-index: 1;
   -webkit-transition: opacity 0.2s ease-in-out;
-  
+
   // hover state is declared below, within #logo.
-  
+
   // For SenchaID.
   &.for-id {
     background-position: 0 -4183px;
   }
-  
+
   // For SenchaDevs.
   &.for-devs {
     background-position: 0 -4317px;
@@ -285,39 +285,39 @@ form textarea {
   position: relative;
   z-index: 99;
   overflow: hidden;
-  
+
   // add a glow behind logo on hover.
   &:hover, &:focus, &:active {
     & + #glow {
       opacity: 1;
     }
   }
-  
+
   // hide the link text
   a {
     display: block;
     width: 100%;
     height: 100%;
     text-indent: -9999px;
-    
+
     // hide the image
     img {
       display: none;
     }
   }
-  
+
   // For Sencha ID logo
   &.for-id {
     background-position: 0 -4112px;
     width: 173px;
   }
-  
+
   // For SenchaDevs logo
   &.for-devs {
     background-position: 0 -4252px;
     width: 193px;
   }
-  
+
   // These are for the 3 panels on the ID home page.
   // For Devs panel on ID homepage
   &.for-devs-panel {
@@ -327,7 +327,7 @@ form textarea {
     margin: 20px auto 13px auto;
     width: 135px;
   }
-  
+
   // For Market panel on ID homepage
   &.for-market-panel {
     background-position: -2px -4468px;
@@ -336,7 +336,7 @@ form textarea {
     margin: 20px auto 13px auto;
     width: 165px;
   }
-  
+
   // For Forum panel on ID homepage
   &.for-forum-panel {
     background-position: -2px -4530px;
@@ -347,7 +347,7 @@ form textarea {
   }
 }
 
-// for IE8, the glow is always visible, for whatever reason. Turn is off 
+// for IE8, the glow is always visible, for whatever reason. Turn is off
 // permanently.
 .lt-ie9 #glow {
   background: none !important;
@@ -374,7 +374,7 @@ form textarea {
     -o-border-bottom-right-radius: 4px;
     -ms-border-bottom-right-radius: 4px;
     -khtml-border-bottom-right-radius: 4px;
-    border-bottom-right-radius: 4px; 
+    border-bottom-right-radius: 4px;
     -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -401,27 +401,27 @@ form textarea {
   padding-top: 6px;
   top: 0;
   left: 0;
-  
+
   ul {
     margin: 0;
-    
+
     li {
       padding: 0 8px;
       position: relative;
-      
+
       a {
         color: #CEE7F7;
         @include display-inline-block;
         font-weight: bold;
         padding: 4px 2px;
         text-decoration: none;
-        
+
         &:hover, &:focus, &:active {
           color: #fff;
           text-decoration: underline;
         }
       }
-      
+
       // applies to link.
       .dropdown {
         background: image-url('sencha_base/dropdown-arrow-down.png') no-repeat right 55%;
@@ -429,10 +429,10 @@ form textarea {
       }
     }
   }
-  
+
   .pop-nav {
     left: 0;
-    
+
     a {
       padding: 6px 0;
     }
@@ -458,42 +458,42 @@ form textarea {
   padding-top: 6px;
   top: 0;
   right: 0;
-  
+
   li {
     padding: 0 8px;
     position: relative;
-    
-    // when a item is not a link, e.g. email address before we have a profile               
+
+    // when a item is not a link, e.g. email address before we have a profile
     //page. Align with other links
     span {
       display: block;
       padding-bottom: 3px;
       padding-top: 5px;
     }
-    
+
     a {
       color: #CEE7F7;
       @include display-inline-block;
       font-weight: bold;
       padding: 4px 2px;
       text-decoration: none;
-      
+
       &:hover, &:focus, &:active {
         color: #fff;
         text-decoration: underline;
       }
     }
   }
-  
+
   .pop-nav {
     left: -8px;
     width: 222px;
-    
+
     label {
       color: #0A81CC;
       display: inline;
     }
-    
+
     input {
       font-weight: bold;
       background: #ECF5FC;
@@ -504,7 +504,7 @@ form textarea {
       color: #0D66A3;
       text-shadow: white;
     }
-    
+
     input.checkbox {
       background-color: transparent;
       background-image: none;
@@ -512,21 +512,21 @@ form textarea {
       width: auto;
       display: inline;
     }
-    
+
     button {
       float: left;
       font-family: 'Helvetica Neue',Arial,'Lucida Grande',sans-serif;
       font-size: 14px;
       margin: 0 14px 16px 2px;
     }
-    
+
     .register-link {
       color: #CEE7F7;
       font-weight: bold;
       font-size: 12px;
     }
   }
-  
+
   li + li {
     border-left: 1px solid #064B80;
   }
@@ -535,7 +535,7 @@ form textarea {
 #market_forum_login_form {
   padding: 4px 16px;
   text-align: left;
-  
+
   a {
     margin: 0;
   }
@@ -551,7 +551,7 @@ form button,
 input[type="submit"] {
   font-weight: 400; // set bolds differently for white on green weight to match.
   padding: 7px 8px 8px;
-  
+
   // modify weights to match link weights.
   &.secondary {
     font-weight: 500;
@@ -565,7 +565,7 @@ a.button-link {
   padding: 8px !important;
   // Previous, perhaps still in consistent and need to revert
   // padding: 6px 8px 9px !important;
-  
+
   // make the button smaller - there are two sizes, standard and smaller
   &.smaller {
     font-size: 12px;
@@ -574,7 +574,7 @@ a.button-link {
 }
 
 
-// When buttons, not links, are .smaller, set the height to keep things the same 
+// When buttons, not links, are .smaller, set the height to keep things the same
 // in Firefox and Safari.
 button.button-link,
 input[type="submit"].button-link {
@@ -601,37 +601,37 @@ a.button-link {
   line-height: 15px;
   text-decoration: none;
   text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
-  
+
   &:hover, &:focus, &:active {
     background-position: 0 -263px;
     background-color: #3A730B;
   }
-  
+
   &:active {
     position: relative;
     top: 1px;
   }
-  
+
   // Display button inline
   &.inline {
-    
+
     // IE7 fix below
     @include display-inline-block;
     cursor: pointer;
   }
-  
+
   &.center {
     text-align: center;
     padding-left: 14px;
     padding-right: 14px;
   }
-  
+
   // make the button smaller - there are two sizes, standard and smaller
   &.smaller {
     font-size: 12px;
     line-height: 8px;
   }
-  
+
   // grey button for secondary actions
   &.secondary {
     background-position: 0 -374px;
@@ -645,7 +645,7 @@ a.button-link {
       background-position: 0 -339px;
       background-color: #D4D4D4;
     }
-    
+
     // make button faded and inactive looking
     &.jaded, .jaded:hover {
       background: #eee;
@@ -655,7 +655,7 @@ a.button-link {
       pointer-events: none;
     }
   }
-  
+
   // blue button for tertiary actions
   &.tertiary {
     background-position: 0 -149px;
@@ -667,7 +667,7 @@ a.button-link {
       background-position: 0 -111px;
     }
   }
-  
+
   // red delete button, ala iOS.
   &.delete {
     background-image: none;
@@ -679,20 +679,20 @@ a.button-link {
     &:hover, &:focus, &:active {
       background: darken(#E28E90, 12.5%);
     }
-    
+
     &.for-delete {
       float: right;
       margin-top: 20px;
     }
   }
-  
+
   // position Search button on Devs home page.
   &.search-button {
     height: 32px;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
-  
+
   &.for-newsletter-sign-up {
     font-weight: bold;
     width: 68px;
@@ -728,12 +728,12 @@ a.button-link {
   padding-bottom: 16px;
   text-rendering: optimizeLegibility;
   text-shadow: rgba(255, 255, 255, 0.8) 0 1px 1px;
-  
+
   // used for “by Developer”, makes blue, on Extensions#show, on Market.
   b {
     color: $blue;
     font-weight: normal;
-    
+
     a, a:link, a:visited {
       color: $blue;
     }
@@ -748,7 +748,7 @@ a.button-link {
   color: #434343;
   font-size: 16px;
   margin-top: 8px;
-  
+
   // limit <p> width for good reading measure.
   p {
     width: 540px;
@@ -769,12 +769,12 @@ a.button-link {
 .hero-content-wrap {
   padding-top: 93px;
   text-align: center;
-  
+
   // add more bottom space on Sencha ID.
   &.for-id {
     padding-bottom: 31px;
   }
-  
+
   // add more bottom space on Sencha Market.
   &.for-market {
     padding-bottom: 10px;
@@ -823,14 +823,14 @@ a.button-link {
 
 #footer-nav {
   position: relative;
-  
+
   .columns {
     float: left;
     position: relative;
     overflow: hidden;
     width: 635px;
   }
-  
+
   .column {
     float: left;
     font-size: 12px;
@@ -838,23 +838,23 @@ a.button-link {
     margin: 0 0 24px 0;
     text-align: left;
     width: 127px;
-    
+
     // when two lists appear after each other in a single column, add space.
     // Make sure this isn't applied to sub menu <li>s
     .stack {
       @include scale(margin-top, 18px, 12px);
     }
   }
-  
+
   // moves the social list to the right, imitating two empty columns.
   .dev-social {
     margin-left: 254px;
   }
-  
+
   ul {
     margin: 0;
   }
-  
+
   // make the headings of groups of footer links bold and blue
   a, a.main, strong, strong a {
     color: #333;
@@ -872,30 +872,30 @@ a.button-link {
       text-decoration: underline;
     }
   }
-  
+
   ul li {
     float: none;
-    
+
     li {
       float: none;
       display: block;
-      
+
       a, input[type="submit"] {
         color: #666;
-        
+
         // Redeclared for Submit buttons
         font-size: 12px;
         line-height: 18px;
         padding: 0;
-        
+
         // required for IE7
         text-align: left;
       }
-      
+
       .last-child {
         margin-bottom: 18px;
       }
-      
+
       a {
         color: #666;
       }
@@ -904,7 +904,7 @@ a.button-link {
 }
 
 #footer-content {
-  
+
   hr {
     background-color: #E0E0E0;
     border: none;
@@ -914,12 +914,12 @@ a.button-link {
     margin: 0 0 24px 0;
     outline: none;
   }
-  
+
   .email-signup-form {
     float: right;
     margin-bottom: 20px;
     width: 209px;
-    
+
     button {
       position: relative;
       top: auto;
@@ -927,11 +927,11 @@ a.button-link {
       margin-top: 0;
       margin-left: 3px;
     }
-    
+
     label {
       margin-bottom: 4px;
       text-align: left;
-      
+
       span {
         color: #434343;
         display: block;
@@ -944,7 +944,7 @@ a.button-link {
       display: none;
     }
   }
-  
+
   .like-tweet {
     padding-top: 19px;
   }
@@ -958,13 +958,13 @@ a.button-link {
   padding-bottom: 3px;
   width: 130px;
   margin: 0;
-  
+
   &:focus {
     background-image: none;
   }
 }
 
-// add a little top space between the search field and breadcrumb on the 
+// add a little top space between the search field and breadcrumb on the
 // search results page.
 .simple-text-input, .search-location {
   margin-top: 7px;
@@ -974,7 +974,7 @@ a.button-link {
   position: relative;
   top: 7px;
   left: 3px;
-  
+
   &:active {
     top: 8px !important;
   }
@@ -1027,18 +1027,18 @@ a.more-icon{
   color: #999;
   float: right;
   font-size: 12px;
-  
+
   p {
     display: inline;
     margin: 0 0 0 12px;
   }
-  
+
   a, a:link, a:visited {
     color: #999;
-    
+
     &:hover, &:active, &:focus {
       text-decoration: underline;
-      
+
       // don't underline the icon
       i {
         text-decoration: none;
@@ -1105,12 +1105,12 @@ background-position: 0 -729px;
 #nav {
   float: right;
   margin-top: 20px;
-  
+
   ul {
     float: right;
     margin-right: -15px;
   }
-  
+
   li {
     height: 27px;
     -moz-border-radius: 4px;
@@ -1119,7 +1119,7 @@ background-position: 0 -729px;
     -ms-border-radius: 4px;
     -khtml-border-radius: 4px;
     border-radius: 4px;
-    
+
     a.main {
       color: #F8FCFF;
       @include display-inline-block;
@@ -1129,7 +1129,7 @@ background-position: 0 -729px;
       text-decoration: none;
       height: 27px;
       padding: 5px 15px 4px;
-      
+
       &:hover, &:focus, &:active {
         text-decoration: underline;
       }
@@ -1142,15 +1142,15 @@ background-position: 0 -729px;
   color: #cde5f8;
   line-height: 31px;
   margin-right: 10px;
-  
-  // When the green button is accompanied by text, remove top positioning from 
+
+  // When the green button is accompanied by text, remove top positioning from
   // the button.
   & + .banner-action {
     top: 0;
   }
 }
 
-// Pull up the action motivation text in IE7, to baseline align with the button 
+// Pull up the action motivation text in IE7, to baseline align with the button
 // text.
 .lt-ie8 .action-motivation {
   position: relative;
@@ -1171,7 +1171,7 @@ background-position: 0 -729px;
   @include border-radius(3px);
 }
 
-// Firefox - decided to use this workaround instead of investing more time in 
+// Firefox - decided to use this workaround instead of investing more time in
 // solving this issue.
 @-moz-document url-prefix() {
   .select-location {
@@ -1214,7 +1214,7 @@ background-position: 0 -729px;
 }
 
 .loading-indicator {
-  display: none; 
+  display: none;
 }
 
 .loading-indicator.visible {
@@ -1251,7 +1251,7 @@ background-position: 0 -729px;
   -webkit-box-shadow: inset 0px -1px 3px #ccc;
   -moz-box-shadow: inset 0px -1px 3px #ccc;
   box-shadow: inset 0px -1px 3px #ccc;
-  
+
   a, a:link, a:visited {
     @include display-inline-block;
     padding: 7px 14px;
@@ -1261,13 +1261,13 @@ background-position: 0 -729px;
 // list of search category tabs.
 .search-filter-tabs-list {
   margin-bottom: 0;
-  
+
   // line up horizontally.
   li {
     display: inline;
     font-weight: bold;
     @include transition(all, .3s, ease-in-out);
-    
+
     // for the first item, round the corner and apply extra left padding.
     &:first-child {
       a, a:link, a:visited {
@@ -1275,13 +1275,13 @@ background-position: 0 -729px;
         border-left: none !important;
       }
     }
-    
+
     a, a:link, a:visited {
       border-right: 1px solid #DFDFDF;
       border-left: 1px solid #DFDFDF;
       color: lighten(#434343,20%);
     }
-    
+
     a:hover, a:focus, a:active {
       color: #434343;
     }
@@ -1310,13 +1310,13 @@ a[data-behaviour='toggle-filter-tab'] {
 // filter options box and heading.
 .filter-options-tab {
   padding: 12px;
-  
+
   h4 {
     color: #4B4C57 !important;
     font-size: 14px;
     margin-bottom: 5px;
     position: relative;
-    
+
     // on hover darken.
     &:hover, &:focus, &:active {
       color: darken(#4B4C57,10%) !important;
@@ -1331,7 +1331,7 @@ a[data-behaviour='toggle-filter-tab'] {
   li {
     @include display-inline-block;
     width: 73px; // gives 14px spacing
-    
+
     a, a:link, a:visited {
       cursor: pointer;
     }
@@ -1342,10 +1342,10 @@ a[data-behaviour='toggle-filter-tab'] {
 .filter-options-list {
   margin-left: 0; // remove base.
   margin-bottom: 0; // remove base
-  margin-top: 5px; // another 5px added at the bottom of the h4 to allow some 
+  margin-top: 5px; // another 5px added at the bottom of the h4 to allow some
                    // spacing between the toggle icon and the scrollbar.
   overflow: hidden; /* TODO: check */
-  
+
   li {
     float: left; /* TODO: check */
     width: 167px; /* TODO: check */
@@ -1355,7 +1355,7 @@ a[data-behaviour='toggle-filter-tab'] {
     margin-bottom: 3px;
     padding: 2px 0 0 3px;
     position: relative;
-    
+
     // link for showing all filter options
     a {
       cursor: pointer;
@@ -1368,7 +1368,7 @@ a[data-behaviour='toggle-filter-tab'] {
   li.filter-option-hidden {
     display: none;
   }
-  
+
   // for the list of Budget values in Edit Search, stack vertically, instead of vertically.
   &.budget, &.company-size {
     li {
@@ -1396,7 +1396,7 @@ a[data-behaviour='toggle-filter-tab'] {
     left: 22px;
     top: 2px;
   }
-  
+
   .filter-option-quantity {
     background: #fff !important;
     @include border-radius(10px);
@@ -1417,7 +1417,7 @@ a[data-behaviour='toggle-filter-tab'] {
     top: 3px;
     vertical-align: middle;
   }
-  
+
   input[type='checkbox'] {
     position: absolute;
     left: 3px;
@@ -1425,7 +1425,7 @@ a[data-behaviour='toggle-filter-tab'] {
   }
 }
 
-// Firefox - decided to use this workaround instead of investing more time in 
+// Firefox - decided to use this workaround instead of investing more time in
 // solving this issue.
 @-moz-document url-prefix() {
   .filter-option-name {
@@ -1459,7 +1459,7 @@ a[data-behaviour='toggle-filter-tab'] {
     line-height: 28px;
     margin-bottom: 0;
   }
-  
+
   // For Developer#show, the developer name.
   // Allow right padding so longer dev names don't overlap the developer badge
   // only applied when the dev has a badge
@@ -1479,7 +1479,7 @@ h3, span {
     font-size: 20px;
     font-weight: normal;
   }
-  
+
   // bold it.
   &.bold {
     font-weight: bold;
@@ -1512,12 +1512,12 @@ h3.normalise {
   margin-right: 5px;
   padding: 0 7px;
   position: relative;
-  
+
   // change bg of service filter items.
   &.service {
     background: lighten(#314E64,67.5%);
   }
-  
+
   // change bg of company size filter items.
   &.budget {
     background: lighten(#314E64,67.5%);
@@ -1529,7 +1529,7 @@ h3.normalise {
   height: 32px;
   margin-top: -6px;
   padding-top: 5px;
-  
+
   .icon-remove {
     margin-right: 11px;
   }
@@ -1564,7 +1564,7 @@ h3.normalise {
   &.company-size-space {
     margin-left: 18px;
   }
-  
+
   // makes the $ the same color as the icons.
   .currency {
     color: lighten(#314E64,30%);
@@ -1581,7 +1581,7 @@ h3.normalise {
   position: relative;
   top: -2px;
   @include transition(all, .2s, ease-in-out);
-  
+
   // darker green on hover.
   &:hover, &:focus, &:active {
     color: #314E64 !important;
@@ -1608,7 +1608,7 @@ h3.normalise {
 // use font awesome icon library.
 [class^="icon-"],
 [class*=" icon-"] {
-  
+
   // primary icon style for Web Symbols
   &.primary {
     color: lighten(#9F9F9F,15%);
@@ -1619,7 +1619,7 @@ h3.normalise {
     &:hover, &:focus, &:active {
       color: #93C33C;
     }
-    
+
     // make the trash can red on hover.
     &.icon-trash {
       &:hover, &:active, &:focus {
@@ -1635,11 +1635,11 @@ h3.normalise {
   position: absolute;
   right: 1px;
   top: 0;
-  
+
   &:hover, &:focus, &:active {
     color: darken(#D5D5D5,60%);
     cursor: pointer;
-    
+
     // Move to hover sprite.
     .edit-search-icon {
       background-position: right -10px;
@@ -1674,7 +1674,7 @@ h3.normalise {
 // applies to the <ul> holding the list of developers and their info.
 .search-results-list {
   margin-left: 0; // 18px applied by default.
-  
+
   > li {
     @include box-soft;
     @extend .clearfix;
@@ -1684,18 +1684,18 @@ h3.normalise {
     -webkit-transition: all .25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
-    
+
     // Visually differentiate partners
     // Make subtle blue, add border - to be shown at the top of search results.
     &.partner {
       background: #EFF2F4;
       border: 1px solid #DAE5ED;
     }
-    
+
     // When the li is hovered over, several child elements change.
     &:hover, &:focus, &:active {
       background: #ECECEC;
-      
+
       // make h2, developer name, blue on hover.
       h2,
       .search-results-list-budget,
@@ -1714,11 +1714,11 @@ h3.normalise {
   margin-right: 1px;
 }
 
-// list for each developer in search results, including budget, no. of people and location 
+// list for each developer in search results, including budget, no. of people and location
 .developer-attributes-list {
   margin-left: 0; // remove base.
   margin-bottom: 8px;
-  
+
   // Prevent line breaks between icon and label
   li {
     white-space: nowrap;
@@ -1739,7 +1739,7 @@ h3.normalise {
 // Styles here shared between Market extensions#show
 // and Devs developers#show.
 
-// <section> which holds the following stuff in a round-corners header style box 
+// <section> which holds the following stuff in a round-corners header style box
 .section-soft {
   @include box-soft;
   margin: 4px 0 20px 0;
@@ -1747,7 +1747,7 @@ h3.normalise {
   padding: 7px 12px 4px 12px;
   position: relative;
   @include transition(background, 300ms, 0);
-  
+
   // <a> position the Download button on product or preview#show,
   // absolutely top right
   .section-soft-download-button {
@@ -1771,7 +1771,7 @@ h3.normalise {
   padding-bottom: 6px;
 }
 
-// <h1> containing the title, author and status, e.g. draft, of a product or 
+// <h1> containing the title, author and status, e.g. draft, of a product or
 // preview#show.
 .section-soft-heading {
   color: $green;
@@ -1787,15 +1787,15 @@ h3.normalise {
   position: absolute;
   right: 11px;
   top: 11px;
-  
+
   &:active {
     position: absolute !important;
     top: 12px !important;
   }
 }
 
-// wrap everything in section-soft up to the list holding the edit and download 
-// button, so a min height can be set to stop the download button collapsing up 
+// wrap everything in section-soft up to the list holding the edit and download
+// button, so a min height can be set to stop the download button collapsing up
 // over the bottom border of the header.
 .section-soft-inner {
   min-height: 95px;
@@ -1804,11 +1804,11 @@ h3.normalise {
 // <ul> holds the caterogies for a product.
 .section-soft-category-list {
   margin: 5px 0 0 0;
-  
+
   li {
     display: inline;
     margin-right: 3px;
-    
+
     // remove right margin from last item.
     &:last-child {
       margin-right: 0;
@@ -1827,9 +1827,9 @@ h3.normalise {
   padding: 2px 3px;
   position: relative;
   @include transition(all, .1s, ease-in-out);
-  
+
   /*
-  
+
   // not required until category filtering has been implemented.
   &:hover, &:active, &:focus {
     background: darken(#F4F7F9,5%);
@@ -1842,19 +1842,19 @@ h3.normalise {
 .section-soft-description {
   margin-top: 20px;
   width: 550px;
-  
+
   // Make Read more link blue
   a, a:link, a:visited {
     color: $blue;
     white-space: nowrap;
-    
+
     // Add underline on hover
     &:hover, &:active, &:focus {
       text-decoration: underline;
     }
   }
-  
-  // when either product or browser listings come after the description, on 
+
+  // when either product or browser listings come after the description, on
   // Preview, add padding.
   & + div {
     margin-top: 20px;
@@ -1880,28 +1880,28 @@ h3.inline-attributes-heading {
   font-size: 12px;
   margin-bottom: 0;
   width: 650px;
-  
+
   li {
     display: inline;
-    
+
     // add comma after each item
     &:after {
       content: ', ';
     }
-    
+
     // add 'and' before the last item.
     &:nth-last-child(2):after {
       content: ' and ';
     }
-    
+
     // don't add a comment for the last item
     &:last-child:after {
       content: '';
     }
-    
+
     a, a:link, a:visited {
       color: #767676;
-      
+
       &:hover, &:active, &:focus {
         color: $blue;
       }
@@ -1935,21 +1935,21 @@ h3.inline-attributes-heading {
   float: left;
   font-size: 12px !important;
   margin-left: 0; // remove list base.
-  
+
   li {
     display: inline;
-    
+
     &:after {
       content: ', ';
     }
-    
+
     &:last-child:after {
       content: '';
     }
   }
 }
 
-// Generate CSS content for IE7; add a comma between services - last comma not 
+// Generate CSS content for IE7; add a comma between services - last comma not
 // removed, as in supporting browsers, which is fine with me.
 .lt-ie8 {
   .developer-services-list {
@@ -1970,7 +1970,7 @@ h3.inline-attributes-heading {
     position: absolute;
     right: 11px;
     top: 11px;
-    
+
     &:nth-child(2) {
       top: 54px;
     }
@@ -1981,21 +1981,21 @@ h3.inline-attributes-heading {
 .provider-level, span.provider-level {
   height: 45px;
   width: 120px;
-  
+
   // Gold
   &.gold {
     background: image-url('sencha_base/badges/premier.png') no-repeat;
-    
+
     @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
       background: image-url('sencha_base/badges/premier@2x.png') no-repeat;
       background-size: 120px 45px;
     }
   }
-  
+
   // Silver
   &.silver {
     background: image-url('sencha_base/badges/select.png') no-repeat;
-    
+
     @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
       background: image-url('sencha_base/badges/select@2x.png') no-repeat;
       background-size: 120px 45px;
@@ -2029,7 +2029,7 @@ input[type="file"].file { // for market (both have different markup)
   background: #fff none no-repeat;
   padding-left: 0px;
   padding-right: 0px;
-  
+
   // when a second block body appears, like the Cancellation section
   &.alt {
     margin-top: 20px;
@@ -2074,11 +2074,11 @@ input[type="file"].file { // for market (both have different markup)
       padding-left: 16px;
     }
   }
-  
+
   // for select fields, make the continers the same height as all others.
   &.select {
     height: 31px;
-    
+
     select {
       font-size: 14px;
       option {
@@ -2086,19 +2086,19 @@ input[type="file"].file { // for market (both have different markup)
       }
     }
   }
-  
+
   // to set a smaller height blockrow - e.g. for email field container on Forgot Password.
   &.smaller {
     height: 20px;
   }
-  
+
   // make the Number of Employees, and some other, select field width smaller.
   &.employee-number, &.small {
     select {
       width: 78px;
     }
   }
-  
+
   // make select field width medium size.
   &.medium {
     select {
@@ -2110,7 +2110,7 @@ input[type="file"].file { // for market (both have different markup)
   select {
     width: 310px;
   }
-  
+
   // remove border and size text for file inputs.
   input[type='file'] {
     border: none;
@@ -2119,7 +2119,7 @@ input[type="file"].file { // for market (both have different markup)
     font-size: 13px;
     padding-left: 0;
   }
-  
+
   // the $ prefix - pull up to baseline align.
   .prefix {
     font-size: 14px;
@@ -2142,30 +2142,30 @@ input[type="file"].file { // for market (both have different markup)
 // wraps content like the formcontrols input wrapper.
 .input-wrap-likeness {
   margin-bottom: 4px;
-  
+
   // indent left, like the typical for inputs.
   p, ul, a.show-more {
     margin: 0 0 0 212px;
   }
-  
+
   ul li {
     float: left;
     list-style-type: disc;
     width: 206px;
-    
+
     // take the bottom border off the last item.
     &:last-child {
       border-bottom: none;
       margin-bottom: 0;
       padding-bottom: 2px;
     }
-    
-    // for the list of screenshots on the preview page. Don't set width and 
+
+    // for the list of screenshots on the preview page. Don't set width and
     // allow them to look like they do on the Screenshots page.
     &.extension-list-item {
       list-style: none;
       width: auto;
-      
+
       // take the left margin off the paragraph.
       p {
         margin-left: 0;
@@ -2174,7 +2174,7 @@ input[type="file"].file { // for market (both have different markup)
   }
 }
 
-// .label-likeness makes things look like labels, e.g. The Extension submission 
+// .label-likeness makes things look like labels, e.g. The Extension submission
 // preview page, applies to h2.
 .formcontrols .input label, .label-likeness, .input-wrap-likeness h2.colt {
   border-bottom: none;
@@ -2184,7 +2184,7 @@ input[type="file"].file { // for market (both have different markup)
   font-weight: bold;
   margin: 0;
   width: 212px;
-  
+
   // add a colon after a label.
   &.colon:after {
     content: ':';
@@ -2218,7 +2218,7 @@ height: 1%;
 .top-block {
   border-bottom: 1px solid $grey-1;
 
-  // When there are no breadcrumbs add margin to the top of .top-block to keep 
+  // When there are no breadcrumbs add margin to the top of .top-block to keep
   // things even.
   margin-top: 18px;
   position: relative;
@@ -2227,13 +2227,13 @@ height: 1%;
   h1 {
     float: left;
   }
-  
+
   // applies to headings - remove bottom border to apply to .top-block instead.
   .balt {
     border-bottom: none;
     margin-bottom: 3px;
   }
-  
+
   // <p> appearing immediately after a big heading, e.g. endorsements request
   & + .plain-text {
     margin-top: 1em;
@@ -2242,7 +2242,7 @@ height: 1%;
 
 // Center the heading and <p> on the Confirm your email address page
 .confirm-email-p,
-.confirm-download-p, 
+.confirm-download-p,
 .top-block .confirm-email-heading,
 .top-block .download-heading {
   float: none;
@@ -2254,7 +2254,7 @@ height: 1%;
 }
 
 .confirm-download-p {
-  
+
   // <a> download button after purchasing an extension
   // Move down the same distance as the email icon on the ID sign up page.
   .download {
@@ -2273,11 +2273,11 @@ nav.bc {
   span:after {
     content: '/';
   }
-  
+
   a:hover, a:focus, a:active {
     text-decoration: underline;
   }
-  
+
   & + .top-block {
     margin-top: 0;
   }
@@ -2316,7 +2316,7 @@ nav.bc span {
 
 .formcontrols .blockrow .primary {
   width: 310px;
-  
+
   // And when it's a textarea set height to 3x height of an textfield.
   &.text-area {
     height: 92px;
@@ -2332,14 +2332,14 @@ nav.bc span {
   height: 31px;
 }
 
-// adjust top padding, so top and bottom are even when the submit button is 
+// adjust top padding, so top and bottom are even when the submit button is
 // featured.
 .formcontrols .blockrow {
   &.singlecheck.submit {
     margin-top: 12px;
     padding-top: 13px;
     position: relative;
-    
+
     // remove extra top margin.
     &.alt {
       margin-top: 0;
@@ -2361,11 +2361,11 @@ width: 100%;
 
 .blockrow, .input, .input-wrap-likeness {
   position: relative;
-  
+
   a, a:link, a:visited {
     color: $blue;
     font-size: 14px;
-    
+
     // On Submit a Request - reduce link size to same as p.explanation.
     &.explanation {
       font-size: 13px;
@@ -2388,7 +2388,7 @@ width: 100%;
     font-size: 13px;
     margin-bottom: 18px;
   }
-  
+
   // Character count, 'X remaining'.
   .charCount {
     color: #777;
@@ -2399,7 +2399,7 @@ width: 100%;
 
 // for list of services on developers show
 .services-list.alt {
-  
+
   li {
     float: left;
     height: 20px;
@@ -2408,26 +2408,26 @@ width: 100%;
   }
 }
 
-// applied to <ul> for the list of services a user joining the directory can 
+// applied to <ul> for the list of services a user joining the directory can
 // choose.
 .formcontrols .blockrow .services-list {
   margin-left: 209px;
-  
+
   label {
     float: none;
   }
-  
+
   li {
     float: left;
     height: 20px;
     position: relative;
     width: 207px;
-    
+
     input {
       position: absolute;
       top: 4px;
     }
-    
+
     label {
       position: absolute;
       left: 26px;
@@ -2450,7 +2450,7 @@ width: 100%;
   position: relative;
   top: 6px;
   left: 10px;
-  
+
   a, a:link, a:visited {
     font-size: 13px;
   }
@@ -2482,53 +2482,53 @@ width: 100%;
   top: -15px;
   @include transition(all, .25s, ease-in-out);
   z-index: 10000;
-  
+
   p span {
     color: lighten(#7EB83C, 45%);
   }
-  
+
   // the bit of text introducing the list. Add some top space.
   .direction {
     margin: 7px 0;
   }
-  
+
   // right align the 'Complete profile' link.
   .act {
     margin-bottom: 0;
     position: absolute;
     right: 12px;
     bottom: 12px;
-    
+
     &.b {
       bottom: 7px;
     }
-    
+
     // if the button is to 'Submit for Approval', position is nicely.
     &.approve {
       bottom: 6px;
     }
   }
-  
+
   h3.alt {
     border-bottom: 1px solid lighten(#7EB83C,25%);
     padding-bottom: 12px;
     margin-bottom: 0;
   }
-  
+
   a, a:link, a:visited {
     color: #fff;
   }
-  
+
   &.rejected {
     background-color: #bc2f00;
     border: none;
     @include box-shadow(0px, 1px, 3px, darken(#bc2f00, 10%));
     text-shadow: darken(#bc2f00, 10%) 0px 1px 0px;
-    
+
     h3.alt {
       border-bottom: 1px solid #fff;
     }
-    
+
     .button-link {
       @extend .delete;
     }
@@ -2545,7 +2545,7 @@ width: 100%;
   color: darken(#7EB83C, 30%);
   list-style-type: disc;
   margin: 0 0 0 18px;
-  
+
   li {
     float: left;
     list-style-type: disc;
@@ -2555,12 +2555,12 @@ width: 100%;
       color: #fff;
     }
   }
-  
-  
+
+
   // when there is an action button limit the width of the ul to make room for it.
   &.with-action {
     width: 624px;
-    
+
     // make the items shorter to sit more snugly.
     li {
       width: 80px;
@@ -2582,16 +2582,16 @@ width: 100%;
 // applies to <ul>, the list of developers you are sending a request to on 'Submit a request'.
 .developer-request-list {
   margin-bottom: 6px;
-  
+
   // line up horizontally.
   li {
     display: inline;
-    
+
     // add comma and a space.
     &:after {
       content: ", ";
     }
-    
+
     // remove comma from the second last item.
     &:nth-last-child(2) {
       // remove comma and space after second last item.
@@ -2599,20 +2599,20 @@ width: 100%;
         content: "";
       }
     }
-    
+
     &:last-child {
 
       // remove comma and space after last item.
       &:after {
         content: "";
       }
-      
+
       // add 'and' before last item.
       &:before {
         content: "and ";
       }
     }
-    
+
     // if only one list item, remove and
     &:first-child {
       &:before {
@@ -2622,7 +2622,7 @@ width: 100%;
   }
 }
 
-// Generate CSS content for IE7; add a comma between services - last comma not 
+// Generate CSS content for IE7; add a comma between services - last comma not
 // removed, as in supporting browsers, which is fine with me.
 .lt-ie8 {
   .developer-request-list {
@@ -2650,7 +2650,7 @@ width: 100%;
   top: 55px;
   width: 100%;
   z-index: 10000;
-  
+
   // For the forum notice on Sencha Market, make sure the link is clickable.
   &.forum_notice {
     pointer-events: auto;
@@ -2659,18 +2659,18 @@ width: 100%;
       text-decoration: underline;
     }
   }
-  
-  // for IE6 a notice is shown to encourage the user to install a new browser or 
+
+  // for IE6 a notice is shown to encourage the user to install a new browser or
   // install chromeframe for IE6. This positions that notice.
   &.chromeframe {
     top: 0px;
-    
+
     a, a:link, a:visited {
       color: #fff;
       text-decoration: underline;
     }
   }
-  
+
   p {
     @include border-radius(2px);
     @include box-shadow(0px, 1px, 7px, rgba(0, 0, 0, 0.3));
@@ -2679,7 +2679,7 @@ width: 100%;
     font-weight: bold;
     margin-top: 0;
     padding: 6px 12px;
-    
+
     &.alert, &.error, &.warning {
       background-color: #bc2f00;
       border: 1px solid darken(#bc2f00, 5%);
@@ -2695,15 +2695,15 @@ width: 100%;
   }
 }
 
-// There's an issue with IE7 where the flash notice pushes content down the 
-// page despite the position: absolute property. This positions the notice in 
+// There's an issue with IE7 where the flash notice pushes content down the
+// page despite the position: absolute property. This positions the notice in
 // that space as a visual compromise.
 .lt-ie8 .flash_notice {
   top: 149px;
 }
 
 h1 {
-  // alternative h2 - used most places other than home page and search results, 
+  // alternative h2 - used most places other than home page and search results,
   // e.g. on the login screen. Makes big green headings.
   &.balt {
     border-bottom: 1px solid $grey-1;
@@ -2729,7 +2729,7 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
   font-weight: bold;
   padding-right: 10px;
   width: 212px;
-  
+
   // add a colon after a label.
   &.colon:after {
     content: ':';
@@ -2746,7 +2746,7 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
   text-transform: lowercase;
 }
 
-// When text appears in a form, where an input usually is, pad-out to keep 
+// When text appears in a form, where an input usually is, pad-out to keep
 // height and alignment in check
 .fake-input {
   display: block;
@@ -2783,17 +2783,17 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
     left: 342px;
     line-height: 150%;
     margin-bottom: 5px;
-    
+
     a, a:link, a:visited {
       font-size: 11px;
     }
-    
+
     // position the hint for email address in Devs.
     &.for-email-addresses {
       top: 40px;
     }
   }
-  
+
   // alternative form input hint, for servies-list.
   .alt-hint {
     margin-left: 212px;
@@ -2847,20 +2847,28 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 // 404
 .p404 {
   background-color: #F8F8F8; // Make bg colour the same grey, don't show darker footer
-  
+
   // “The page you’re trying to reach could not be found”
   h2 {
     font-size: 2em;
     margin-bottom: 0.75em;
     margin-top: 0.5em;
   }
-  
+
   // Make the link noticeble
   p {
     a, a:link, a:visited {
       border-bottom: 1px solid #ccc;
     }
   }
+}
+
+// Sencha Conference banner
+
+.sencha-conference-banner {
+  margin-bottom: 32px;
+  margin-top: 12px;
+  text-align: center;
 }
 
 @import 'font-awesome-ie7';
