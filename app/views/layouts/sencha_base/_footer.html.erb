@@ -1,13 +1,5 @@
 <footer id="footer" class="clearfix">
   <div id="footer-content">
-    <%- if Time.now < '2013-07-20'.to_time -%>
-      <div class="sencha-conference-banner">
-        <a href="http://www.senchacon.com/?utm_source=website&amp;utm_medium=<%= current_app %>&amp;utm_campaign=senchacon2013">
-          <img src="http://cdn.sencha.io/img/senchacon2013/banners/senchacon-banner.png" alt="Senchacon-banner">
-        </a>
-      </div>
-    <%- end -%>
-
     <nav id="footer-nav" class="clearfix">
       <div class="columns">
 
@@ -16,13 +8,14 @@
             <a class="main" href="http://www.sencha.com/products/">Products</a>
             <ul class="zero">
               <li class="first"><a href="http://www.sencha.com/products/complete/">Sencha Complete</a></li>
-              <li><a href="http://www.sencha.com/products/complete-team/">Sencha Complete: Team</a></li>
-              <li><a href="http://www.sencha.com/products/architect/">Sencha Architect</a></li>
-              <li><a href="http://www.sencha.com/products/extjs/">Sencha Ext JS</a></li>
+              <li><a href="http://www.sencha.com/products/touch-bundle/">Sencha Touch Bundle</a></li>
               <li><a href="http://www.sencha.com/products/touch/">Sencha Touch</a></li>
-              <li class="here"><a href="http://www.sencha.com/products/gxt/">Sencha GXT</a></li>
+              <li><a href="http://www.sencha.com/products/extjs/">Sencha Ext JS</a></li>
+              <li><a href="http://www.sencha.com/products/gxt/">Sencha GXT</a></li>
+              <li><a href="http://www.sencha.com/products/architect/">Sencha Architect</a></li>
+              <li><a href="http://www.sencha.com/products/desktop-packager/">Sencha Desktop Packager</a></li>
               <li><a href="http://www.sencha.com/products/animator/">Sencha Animator</a></li>
-              <li class="last"><a href="http://www.sencha.com/products/io/">Sencha.io</a></li>
+              <li class="here last"><a href="http://www.sencha.com/products/space/">Sencha Space</a></li>
             </ul>
           </li>
         </ul>
@@ -41,6 +34,10 @@
               <li class="first last"><a href="http://www.sencha.com/training/courses/">Courses</a></li>
             </ul>
           </li>
+          <li class="stack"><a href="http://developer.sencha.com" class="main">Developer Center</a></li>
+          <li><a href="http://www.senchadevs.com/">Sencha Devs</a></li>
+          <li><a href="http://market.sencha.com/">Sencha Market</a></li>
+          <li><a href="http://try.sencha.com/">Sencha Try</a></li>
         </ul>
 
         <ul class="column">
@@ -61,7 +58,6 @@
         <ul class="column">
           <li><a class="main" href="http://www.sencha.com/blog/">Blog</a></li>
           <li><a class="main" href="http://www.sencha.com/forum/">Forum</a></li>
-          <li><a class="main" href="http://www.sencha.com/learn/">Learn</a></li>
           <li><a class="main" href="http://docs.sencha.com/">API Docs</a></li>
           <li><a class="main" href="http://www.sencha.com/apps/">App Gallery</a></li>
           <li><a class="main" href="http://pages.sencha.com/resources">Resource Library</a></li>
@@ -75,6 +71,7 @@
           <li><a class="twitter" href="http://twitter.com/sencha">Twitter</a></li>
           <li><a class="tumblr" href="http://senchainc.tumblr.com/">Tumblr</a></li>
           <li><a class="vimeo" href="http://vimeo.com/sencha">Vimeo</a></li>
+          <li><a class="gplus" href="https://plus.google.com/117303203295549187007">Google+</a></li>
         </ul>
 
       </div> <%# columns %>
@@ -113,13 +110,13 @@
     </nav> <%# footer-nav %>
     <hr />
 
-    <p class="find-developers-footer-link"><a href="http://www.senchadevs.com" title="Find Sencha developers near you." class="more-icon">Find Sencha developers at SenchaDevs</a></p>
+    <p class="find-developers-footer-link"><a href="http://www.senchadevs.com" title="Find Sencha developers near you." class="more-icon">Find Sencha developers at Sencha Devs</a></p>
 
     <div id="copyright">
       <%- if (respond_to?(:logged_in?) && logged_in?) || (respond_to?(:user_signed_in?) && user_signed_in?) -%>
         <a id="support-link" href="#"><i class="icon-bullhorn for-support-icon"></i>Support / Flag Content</a>
       <%- end -%>
-      <p>&copy; 2012 Sencha Inc. All rights reserved.</p>
+      <p>&copy; <%= Time.now.year %> Sencha Inc. All rights reserved.</p>
     </div>
   </div> <%# #footer-content %>
 </footer>

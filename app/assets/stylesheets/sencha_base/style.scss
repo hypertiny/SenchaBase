@@ -1073,11 +1073,16 @@ a.more-icon{
   white-space: normal;
   word-spacing: normal;
 }
+#footer-nav a.legal {
+  color: #666666;
+}
+
 #footer-nav .social a.facebook,
 #footer-nav .social a.linkedin,
 #footer-nav .social a.tumblr,
 #footer-nav .social a.twitter,
-#footer-nav .social a.vimeo {
+#footer-nav .social a.vimeo,
+#footer-nav .social a.gplus {
   background: image-url('sencha_base/social.png') no-repeat;
 }
 
@@ -1096,8 +1101,11 @@ background-position: 0 -775px;
 #footer-nav .social a.vimeo {
 background-position: 0 -729px;
 }
+#footer-nav .social a.gplus {
+background-position: 0 -819px;
+}
 #footer-nav .social a {
-  color: #666;
+  color: #333333;
   padding-left: 18px;
 }
 
