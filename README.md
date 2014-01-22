@@ -93,19 +93,19 @@ See [http://mrdanadams.com/2012/pixel-ems-css-conversion-sass-mixin/] (http://mr
 
     to
 
-    ``gem 'sencha_base', :path => /path/to/local/sencha-base``
+    ``gem 'sencha_base', :path => '/path/to/local/sencha-base'``
 
     Note! Don't commit a Gemfile when you've pointed it to a local SenchaBase gem.
 
-  2. Run ``bundle``
+  2. Run ``bundle`` so the app points to your local version.
   3. Make your changes to SenchaBase
-  4. Restart the Sencha app you’re working on (e.g. ID, Devs, Market). If using Pow: ``touch tmp/restart.txt``
+  4. Restart the Sencha app you’re working on (e.g. ID, Devs, Market) so your changes will be picked up. If using Pow: ``touch tmp/restart.txt``
   5. Repeats steps 3 and 4 until you are ready to commit your SenchaBase changes.
   6. Commit SenchaBase changes and push.
   7. Copy the short commit ref for your latest SenchaBase commit, i.e. first 7 characters.
   8. Update the apps using SenchaBase to use the latest version by pointing them to that latest commit ref by changing:
 
-    ``gem 'sencha_base', :path => /path/to/local/sencha-base``
+    ``gem 'sencha_base', :path => '/path/to/local/sencha-base'``
 
     to
 
