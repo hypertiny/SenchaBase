@@ -87,28 +87,13 @@ See [http://mrdanadams.com/2012/pixel-ems-css-conversion-sass-mixin/] (http://mr
 
 ## Workflow
 
-  1. Point Gemfile to local SenchaBase gem by changing
+  1. To develop, work with `test/dummy/app/views/layouts/application.html.erb' and 'test/dummy/app/views/development/show.html.erb' and view your work by firing up the dummy app e.g.
+
+    cd test/dummy
+    rails server
+
+  2. To apply your changes to Sencha Market/ID/Developement, commit your changes to SenchaBase and push, then copy the short commit ref for that commit and update it in the Gemfile of the app(s) using SenchaBase e.g.
 
     ``gem 'sencha_base', :git => 'git://github.com/hypertiny/SenchaBase.git', :ref => 'xxxxxxxx'``
 
-    to
-
-    ``gem 'sencha_base', :path => '/path/to/local/sencha-base'``
-
-    Note! Don't commit a Gemfile when you've pointed it to a local SenchaBase gem.
-
-  2. Run ``bundle`` so the app points to your local version.
-  3. Make your changes to SenchaBase
-  4. Restart the Sencha app you’re working on (e.g. ID, Devs, Market) so your changes will be picked up. If using Pow: ``touch tmp/restart.txt``
-  5. Repeats steps 3 and 4 until you are ready to commit your SenchaBase changes.
-  6. Commit SenchaBase changes and push.
-  7. Copy the short commit ref for your latest SenchaBase commit, i.e. first 7 characters.
-  8. Update the apps using SenchaBase to use the latest version by pointing them to that latest commit ref by changing:
-
-    ``gem 'sencha_base', :path => '/path/to/local/sencha-base'``
-
-    to
-
-    ``gem 'sencha_base', :git => 'git://github.com/hypertiny/SenchaBase.git', :ref => 'latest-commit-ref'``
-
-  9. Bundle those apps and commit.
+  3. Then bundle those apps and commit.

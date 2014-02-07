@@ -1,0 +1,25 @@
+//@import 'helpers';
+@import 'sencha_base/helpers';
+
+// Only select the Compass imports required
+// See the list of Compass import names here:
+// http://compass-style.org/reference/compass/
+
+// Required for the ellipsis import.
+//$use-mozilla-ellipsis-binding: true;
+
+//@import "compass/css3/border-radius";
+//@import "compass/css3/box-sizing";
+//@import "compass/css3/hyphenation";
+//@import "compass/css3/opacity";
+//@import "compass/css3/shared";
+//@import "compass/utilities/general/clearfix";
+//@import "compass/utilities/text/ellipsis";
+//@import "compass/typography/lists";
+//@import "compass/typography/text/replacement";
+//@import "compass/typography/vertical_rhythm";
+
+ * {
+   background: #ff0000;
+   color: #ff0000;
+}

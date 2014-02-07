@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sencha Base Dummy</title>
+  <link rel="image_src" href="<%= asset_path("sencha_base/logo-screen-ie.png")%>">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="assets/sencha_base/selectivizr-min.js"></script>
+  <![endif]-->
+
+  <!--[if IE 7]><link rel="stylesheet" href="/assets/sencha_base/font-awesome-ie7.css"><![endif]-->
+
+  <script type="text/javascript" src="//use.typekit.net/bqo8qzg.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+  <link rel="apple-touch-icon-precomposed" href="<%= asset_path("sencha_base/apple-touch-icon.png") %>">
+  <link rel="shortcut icon" type="image/ico" href="<%= asset_path("sencha_base/favicon.ico") %>" />
+</head>
+<body>
+
+  <!--[if lt IE 7]>
+    <div id="flash" class="flash_notice">
+      <p class="error">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+    </div>
+  <![endif]-->
+
+  <header id="header">
+
+    <div id="logo-container" class="skiptranslate">
+      <h5 id="logo">
+        <a href="/">
+          <%= image_tag("sencha_base/sencha-large.png", :alt => "Sencha Market") %>
+        </a>
+      </h5>
+      <span id="glow"></span>
+    </div>
+
+    <nav id="nav">
+      <ul class="zero">
+        <li class="filter_type">
+          <span class="action-motivation">A descriptive tag line.</span>
+            <%= link_to "Call to Action", '#',
+                  :rel => "nofollow",
+                  :class => "button-link inline" %>
+        </li>
+      </ul>
+    </nav>
+
+    <%= render :partial => 'layouts/sencha_base/network_nav' %>
+
+    <nav id="util-nav">
+      <ul>
+        <%- if params[:login] -%>
+          <li>
+            <%= link_to 'developer@sencha-base.com', '#', :rel => "nofollow", :class => "with-sub" %>
+          </li>
+          <li>
+            <%= link_to "Log Out", '#', :rel => "nofollow", :class => "with-sub" %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to "Log In", '#', :rel => "nofollow", :class => "with-sub" %>
+          </li>
+        <%- end -%>
+      </ul>
+    </nav>
+  </header>
+
+  <% flash.each do |type, message| %>
+    <div id="flash" class="flash_notice">
+      <p class="<%= type %>"><%= message %></p>
+    </div>
+  <% end %>
+
+  <%= yield %>
+
+  <%= render :partial => 'layouts/sencha_base/footer' %>
+
+</body>
+</html>
