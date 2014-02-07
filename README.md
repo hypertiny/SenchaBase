@@ -87,10 +87,12 @@ See [http://mrdanadams.com/2012/pixel-ems-css-conversion-sass-mixin/] (http://mr
 
 ## Workflow
 
-  1. To develop, work with `test/dummy/app/views/layouts/application.html.erb' and 'test/dummy/app/views/development/show.html.erb' and view your work by firing up the dummy app e.g.
+  1. To develop, work with `test/dummy/app/views/layouts/application.html.erb` and `test/dummy/app/views/development/show.html.erb` and view your work by firing up the dummy app e.g.
 
+    ```
     cd test/dummy
     rails server
+    ```
 
   2. To apply your changes to Sencha Market/ID/Developement, commit your changes to SenchaBase and push, then copy the short commit ref for that commit and update it in the Gemfile of the app(s) using SenchaBase e.g.
 
