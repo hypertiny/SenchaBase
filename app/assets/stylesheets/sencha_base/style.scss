@@ -56,7 +56,7 @@ html {
 body {
   background: #EDEDED image-url('sencha_base/_bg-top-grey.png') repeat-x top center;
   border: 0;
-  color: $text;
+  color: $c-text;
   font: #{$base-font-size}/20px "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
   margin: 0;
   padding: 0;
@@ -74,7 +74,7 @@ em {
 
 a, a:visited {
   text-decoration: none;
-  color: #333;
+  color: $c-link;
 }
 
 a:hover {
@@ -89,20 +89,20 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 1.1em;
   text-rendering: optimizeLegibility;
 }
+
 h1,h2,h3,h4 {
-  color: #314e64;
+  color: $c-text;
 }
 
 h2 {
   font-weight: 300;
   text-align: left;
-  color: #66ab16;
+  color: $c-green;
   font-family:"klavika-web-1", "klavika-web-2", sans-serif;
   font-size: 3em;
 }
 
 h3 {
-  color: #fff;
   font-family:"klavika-web-1", "klavika-web-2", sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -137,7 +137,7 @@ hr {
 .heading {
   padding: 3.6em 0 1.8em;
   margin-bottom: 1.8em;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $c-border;
 }
 
 .heading h2 {
@@ -152,7 +152,7 @@ hr {
 }
 
 .box-heading {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $c-border;
   clear: both;
   overflow: hidden;
   margin-top: 4em;
@@ -213,7 +213,7 @@ hr {
 form input,
 form textarea {
   background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAMAAABIdo1RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF8vLy2dnZzgvGVQAAABBJREFUeNpiYAQCBhAACDAAACgABekA5OQAAAAASUVORK5CYII=') repeat-x 0 0;
-  border: 1px solid #CCC;
+  border: 1px solid $c-border;
   font-family: "Helvetica Neue",Arial,"Lucida Grande",sans-serif;
   padding: 5px 3px 4px;
   @include border-radius(3px);
@@ -394,7 +394,8 @@ form textarea {
 
 // Sencha Network drop down menu.
 #siteNav {
-  color: #CEE7F7;
+  // color: #CEE7F7;
+  color: lighten($c-blue, 10%);
   font-size: 12px;
   line-height: 1.0em;
   position: absolute;
@@ -410,7 +411,9 @@ form textarea {
       position: relative;
 
       a {
-        color: #CEE7F7;
+        // color: #CEE7F7;
+        color: lighten($c-blue, 60%);
+        
         @include display-inline-block;
         font-weight: bold;
         padding: 4px 2px;
@@ -2873,3 +2876,101 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 }
 
 @import 'font-awesome-ie7';
+
+// Styleguide
+
+.guide-title {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.guide-section {
+  margin: 0.5rem 0;
+  @include clearfix;
+}
+
+.guide-color-box {
+  position: relative;
+  float: left;
+  margin-right: 0.5rem;
+  .color {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .color-label {
+    position: absolute;
+    top: 4.5rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: Menlo;
+  }
+
+  &.light .color-label {
+    color: #333;
+  }
+  
+  &.blue .color {
+    background: $c-blue;
+  }
+
+  &.green .color {
+    background: $c-green;
+  }
+
+  &.grey-primary .color {
+    background: $c-grey-primary;
+  }
+
+  &.grey-secondary .color {
+    background: $c-grey-secondary;
+  }
+
+  &.light-blue .color {
+    background: $c-text-nav;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

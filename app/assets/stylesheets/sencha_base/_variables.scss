@@ -1,6 +1,55 @@
 $base-font-size: 14px;
 
+// Colours
+// ---------------------------------------------------------
+
+$c-blue:                            #126499;
+$c-green:                           #66AB16;
+$c-grey-primary:                    #F1F1F1;
+$c-grey-secondary:                  #434343;
+
+
+// Colour Aliases
+
+$c-text:                            $c-grey-secondary;
+$c-text-h:                          $c-green;
+$c-link:                            darken($c-grey-secondary, 5%);
+$c-link-hover:                      darken($c-grey-secondary, 10%);
+$c-border:                          darken($c-grey-primary, 10%);
+$c-blue-light-original:             #CEE7F7;
+$c-text-nav:                        lighten($c-blue, 56%);
+
+// Legacy
+// These are being kept until the new variable are swapped in
 $blue: #126499;
 $green: #66AB16;
 $grey-1: #F1F1F1;
 $text: #434343;
+
+
+// Decoration
+// ---------------------------------------------------------
+
+$d-radius-xs:                       2px;
+$d-radius-sm:                       3px;
+$d-radius-md:                       5px;
+$d-radius-md:                       7px;
+
+// Grid
+// ---------------------------------------------------------
+
+$g-gutter:                          18px;
+
+
+
+// =========================================================
+// Mixins
+// =========================================================
+
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
