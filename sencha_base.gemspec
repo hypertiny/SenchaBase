@@ -7,9 +7,9 @@ require "sencha_base/version"
 Gem::Specification.new do |s|
   s.name        = "sencha_base"
   s.version     = SenchaBase::VERSION
-  s.authors     = ["Hypertiny"]
-  s.email       = ["monkeybaby@hypertiny.com"]
-  s.homepage    = "http://github.com/hypertiny/SenchaBase"
+  s.authors     = ["Hypertiny,Jvcanote"]
+  s.email       = ["monkeybaby@hypertiny.com,jacob@webdogs.com"]
+  s.homepage    = "http://github.com/jvcanote/SenchaBase"
   s.summary     = "Common resources for Sencha apps."
   s.description = "A Rails Engine for resources common to multiple Sencha apps."
 
