@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'bootstrap-sass', '~> 2.3.1.0'
   s.add_development_dependency "coffee-rails", "~> 3.2.1"
   s.add_development_dependency 'compass-rails'
-  s.add_development_dependency 'jquery-rails', '~> 1.0.19'
+  s.add_development_dependency 'jquery-rails', '~> 3.1.5'
   s.add_development_dependency "sass-rails", "~> 3.2.5"
   s.add_development_dependency "uglifier", ">= 1.0.3"
 end
